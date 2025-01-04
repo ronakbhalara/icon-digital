@@ -17,7 +17,7 @@ const Header = () => {
     { title: "Pre-Build PC", url: "" },
     { title: "Accessories & Software", url: "" },
     { title: "Customize Product", url: "" },
-    { title: "Support", url: "" },
+    { title: "Support", url: "/support" },
   ];
 
   return (
