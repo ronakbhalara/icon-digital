@@ -33,7 +33,7 @@ const Header = () => {
           {/* Logo */}
           <div>
             <Image
-              src="https://i.ibb.co/WkgqKCx/logo.png"
+              src="/assets/images/logo.png"
               alt="logo image"
               height={70}
               width={150}
