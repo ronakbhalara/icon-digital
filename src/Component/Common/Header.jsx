@@ -16,7 +16,7 @@ const Header = () => {
     { title: "Printer", url: "" },
     { title: "Pre-Build PC", url: "" },
     { title: "Accessories & Software", url: "" },
-    { title: "Customize Product", url: "" },
+    { title: "Customize Product", url: "/customizeProduct" },
     { title: "Support", url: "/support" },
   ];
 
@@ -45,7 +45,14 @@ const Header = () => {
           <div className="flex items-center gap-4 text-gray-800">
             <PiHeart size={24} className="cursor-pointer" />
             <PiShoppingCart size={24} className="cursor-pointer" />
-            <PiUserCircle size={24} className="cursor-pointer" />
+            <Link
+              href="/profile"
+            >
+              <PiUserCircle
+                size={24}
+                className="cursor-pointer"
+              />
+            </Link>
             <button
               className="md:hidden"
               onClick={() => setIsMobileMenuOpen(true)}
