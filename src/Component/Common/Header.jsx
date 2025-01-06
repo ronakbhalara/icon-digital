@@ -10,13 +10,13 @@ const Header = () => {
 
   const header = [
     { title: "Laptop", url: "/laptop" },
-    { title: "Desktop", url: "/desktop" },
-    { title: "All In One", url: "/all-in-one" },
-    { title: "Monitors", url: "/monitors" },
-    { title: "Printer", url: "/printer" },
-    { title: "Pre-Build PC", url: "/pre-build-pc" },
-    { title: "Accessories & Software", url: "/accessories-software" },
-    { title: "Customize Product", url: "/customizeProduct" },
+    { title: "Desktop", url: "#" },
+    { title: "All In One", url: "#" },
+    { title: "Monitors", url: "#" },
+    { title: "Printer", url: "#" },
+    { title: "Pre-Build PC", url: "#" },
+    { title: "Accessories & Software", url: "#" },
+    { title: "Customize Product", url: "/customize-product" },
     { title: "Support", url: "/support" },
   ];
 

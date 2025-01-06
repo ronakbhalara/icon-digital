@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
@@ -9,14 +10,16 @@ const Footer = () => {
         <div className='flex flex-col md:flex-row sm:gap-10 gap-5 md:gap-x-7'>
           {/* Logo and Description */}
           <div>
-            <Image
-              src="/assets/images/logo.png"
-              alt="logo image"
-              height={300}
-              width={300}
-              className="w-auto sm:h-[50px] h-8 cursor-pointer object-cover"
-              priority
-            />
+            <Link href="/">
+              <Image
+                src="/assets/images/logo.png"
+                alt="logo image"
+                height={300}
+                width={300}
+                className="w-auto sm:h-[50px] h-8 cursor-pointer object-cover"
+                priority
+              />
+            </Link>
             <p className='text-[#4D4D4D] text-base font-medium max-w-[440px] sm:pt-[30px] pt-2.5'>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
