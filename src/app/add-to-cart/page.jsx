@@ -73,7 +73,7 @@ const AddToCart = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-span-2 p-5 sm:space-y-44 space-y-10'>
+                    <div className='col-span-2 p-5 flex flex-col justify-between'>
                         <div>
                             <p className='text-base text-[#333311] SF_Pro font-medium'>Summary</p>
                             <div className='pt-3 space-y-3 border-b pb-3 border-dashed border-[#CACACA]'>

@@ -112,10 +112,10 @@ const Laptop = () => {
                                 return (
                                     <div
                                         key={i}
-                                        className="w-auto h-[382px] bg-gray-100 p-8 rounded-[20px] relative"
+                                        className="w-auto sm:h-[382px] h-60 bg-gray-100 sm:p-8 p-4 rounded-[20px] relative"
                                     >
                                         <h2 className="text-4xl leading-[50px] font-bold sm:w-[298px] w-auto">{item.title}</h2>
-                                        <div className='absolute bottom-5 flex items-center'>
+                                        <div className='absolute sm:bottom-5 bottom-7 flex items-center'>
                                             <button className='px-9 py-2.5  border border-[#14519E] text-base_40/5 font-medium gradient-text rounded-full Outfit'>View All</button>
                                             <div className='p-[13px] border border-[#14519E] rounded-full'>
                                                 <PiArrowUpRight />
@@ -126,7 +126,7 @@ const Laptop = () => {
                                 );
                             } else if (item.type === "Product") {
                                 return (
-                                    <div className='h-[382px] w-auto relative bg-[#F6F6F6] rounded-[20px] sm:pr-3.5 pt-[57px] sm:pl-[23px] pb-[15px]' key={i}>
+                                    <div className='sm:h-[382px] h-auto w-auto relative bg-[#F6F6F6] rounded-[20px] sm:pr-3.5 pr-3 sm:pt-[57px] pt-5 sm:pl-[23px] pl-3 pb-[15px]' key={i}>
                                         <div className='flex justify-center'>
                                             <Image
                                                 src={item?.image}
@@ -142,9 +142,9 @@ const Laptop = () => {
                                                 <p className='pt-[2px] text-[#2B2A29] text-sm_40/5'>Processor {item?.Processor}</p>
                                                 <p className='pt-4 text-xl_36 text-[#2B2A29] font-bold'>₹ {item?.price}</p>
                                             </div>
-                                            <div className='sm:h-[80px] h-[30px] sm:w-[80px] w-auto bg-white flex justify-center items-center absolute right-0 bottom-2.5 rounded-[20px]'>
+                                            <div className='sm:h-[80px] h-[30px] sm:w-[80px] w-auto bg-white flex justify-center items-center rounded-[20px]'>
                                                 <Link
-                                                    className='button-linear-gradient text-white cursor-pointer h-[62px] w-[62px] rounded-full flex justify-center items-center'
+                                                    className='button-linear-gradient text-white cursor-pointer sm:h-[62px] sm:w-[62px] h-14 w-14 rounded-full flex justify-center items-center'
                                                     href="/laptop/product-details"
                                                 >
                                                     <PiShoppingCart size={24} />
