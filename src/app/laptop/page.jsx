@@ -99,7 +99,7 @@ const Laptop = () => {
         <WebLayout>
             <h1 className='pt-5 text-4xl font-black text-center pb-4 border-b border-[#CECECE] SF_Pro'>Laptops</h1>
             <div className='w-full max-w-[1200px] mx-auto pt-10 sm:px-0 px-4'>
-                <div className='grid sm:grid-cols-7 grid-cols-1 am:gap-x-6'>
+                <div className='grid sm:grid-cols-7 grid-cols-1 sm:gap-x-6 gap-y-4'>
                     <div className="bg-white rounded-lg shadow-sm col-span-2">
                         {filterData.map((filter, index) => (
                             <FilterSection key={index} title={filter.title} options={filter.options} />
@@ -112,7 +112,7 @@ const Laptop = () => {
                                 return (
                                     <div
                                         key={i}
-                                        className="w-auto h-[382px] bg-gray-100 p-8 rounded-md relative"
+                                        className="w-auto h-[382px] bg-gray-100 p-8 rounded-[20px] relative"
                                     >
                                         <h2 className="text-4xl leading-[50px] font-bold sm:w-[298px] w-auto">{item.title}</h2>
                                         <div className='absolute bottom-5 flex items-center'>
@@ -142,7 +142,7 @@ const Laptop = () => {
                                                 <p className='pt-[2px] text-[#2B2A29] text-sm_40/5'>Processor {item?.Processor}</p>
                                                 <p className='pt-4 text-xl_36 text-[#2B2A29] font-bold'>₹ {item?.price}</p>
                                             </div>
-                                            <div className='sm:h-[80px] h-[30px] sm:w-[80px] w-auto bg-white flex justify-center items-center absolute right-0 bottom-7 rounded-[20px]'>
+                                            <div className='sm:h-[80px] h-[30px] sm:w-[80px] w-auto bg-white flex justify-center items-center absolute right-0 bottom-2.5 rounded-[20px]'>
                                                 <Link
                                                     className='button-linear-gradient text-white cursor-pointer h-[62px] w-[62px] rounded-full flex justify-center items-center'
                                                     href="/laptop/product-details"
