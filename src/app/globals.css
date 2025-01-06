@@ -44,7 +44,7 @@ display: none;
 .marquee {
     display: flex;
     white-space: nowrap;
-    animation: scrollLeft 15s linear infinite;
+    animation: scrollLeft 10s linear infinite;
 }
 
 @keyframes scrollLeft {
@@ -59,7 +59,7 @@ display: none;
 .marquee_One {
     display: flex;
     white-space: nowrap;
-    animation: scrollRight 15s linear infinite;
+    animation: scrollRight 10s linear infinite;
 }
 
 @keyframes scrollRight {

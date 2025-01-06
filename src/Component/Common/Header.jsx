@@ -10,48 +10,46 @@ const Header = () => {
 
   const header = [
     { title: "Laptop", url: "/laptop" },
-    { title: "Desktop", url: "" },
-    { title: "All In One", url: "" },
-    { title: "Monitors", url: "" },
-    { title: "Printer", url: "" },
-    { title: "Pre-Build PC", url: "" },
-    { title: "Accessories & Software", url: "" },
+    { title: "Desktop", url: "/desktop" },
+    { title: "All In One", url: "/all-in-one" },
+    { title: "Monitors", url: "/monitors" },
+    { title: "Printer", url: "/printer" },
+    { title: "Pre-Build PC", url: "/pre-build-pc" },
+    { title: "Accessories & Software", url: "/accessories-software" },
     { title: "Customize Product", url: "/customizeProduct" },
     { title: "Support", url: "/support" },
   ];
 
   return (
     <div className="sm:py-6 py-3 border-b border-gray-300 bg-white">
-      <div className="w-full max-w-6xl mx-auto px-4">
+      <div className="w-full max-w-[1200px] mx-auto px-4">
         {/* Top Section */}
         <div className="flex items-center justify-between">
           {/* Contact Info */}
           <div className="sm:flex items-center hidden gap-2 text-gray-800">
             <PiPhone size={20} />
-            <span className="text-sm ">+91 85954 23549</span>
+            <span className="text-sm">+91 85954 23549</span>
           </div>
+
           {/* Logo */}
           <div>
-            <Image
-              src="/assets/images/logo.png"
-              alt="logo image"
-              height={70}
-              width={150}
-              className="cursor-pointer sm:h-[50px] h-8 w-auto"
-            />
+            <Link href="/">
+              <Image
+                src="/assets/images/logo.png"
+                alt="logo image"
+                height={70}
+                width={150}
+                className="cursor-pointer sm:h-[50px] h-8 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Icons and Mobile Menu Toggle */}
           <div className="flex items-center gap-4 text-gray-800">
             <PiHeart size={24} className="cursor-pointer" />
             <PiShoppingCart size={24} className="cursor-pointer" />
-            <Link
-              href="/profile"
-            >
-              <PiUserCircle
-                size={24}
-                className="cursor-pointer"
-              />
+            <Link href="/profile">
+              <PiUserCircle size={24} className="cursor-pointer" />
             </Link>
             <button
               className="md:hidden"
@@ -67,10 +65,10 @@ const Header = () => {
           {header.map((item, i) => (
             <Link
               key={i}
-              href={item?.url || "#"}
+              href={item.url}
               className="hover:text-gray-800 transition-colors"
             >
-              {item?.title}
+              {item.title}
             </Link>
           ))}
         </div>
@@ -91,11 +89,11 @@ const Header = () => {
           {header.map((item, i) => (
             <Link
               key={i}
-              href={item?.url || "#"}
+              href={item.url}
               className="hover:text-gray-600 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {item?.title}
+              {item.title}
             </Link>
           ))}
         </div>

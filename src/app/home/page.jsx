@@ -382,7 +382,7 @@ const Home = () => {
                 {/* service block */}
                 <div className='sm:pt-[130px] pt-10'>
                     <div className='w-full max-w-[1200px] sm:px-0 px-4 mx-auto'>
-                        <h2 className='text-[#2B2A29] font-bold sm:text-[48px] text-4xl_48 text-center SF_Pro'>We’re Here to Help You</h2>
+                        <h2 className='text-[#2B2A29] font-bold sm:text-[48px] text-3xl text-center SF_Pro'>We're Here to Help You</h2>
                         <div className='sm:pt-[80px] pt-10 grid sm:grid-cols-4 grid-cols-2 sm:gap-11 gap-5'>
                             {Service.map((item, i) => (
                                 <div className='' key={i}>
@@ -408,7 +408,7 @@ const Home = () => {
                 {/* Customer block */}
                 <div className='sm:pt-[130px] pt-10'>
                     <div className='w-full max-w-[1200px] sm:px-0 px-4 mx-auto'>
-                        <h2 className='text-[#2B2A29] font-bold sm:text-[48px] text-4xl_48 text-center SF_Pro'>What Customer Say</h2>
+                        <h2 className='text-[#2B2A29] font-bold sm:text-[48px] text-3xl text-center SF_Pro'>What Customer Say</h2>
                         <div className='sm:pt-10 pt-7 grid sm:grid-cols-4 grid-cols-1 gap-5'>
                             {Customer.map((item, i) => (
                                 <div className='border border-[#D7D7D7] rounded-[20px] sm:py-[30px] py-4 px-5' key={i}>
