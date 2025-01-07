@@ -1,13 +1,10 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import ForgetPassword from '@/Component/login-flow/Forgetpassword';
-import TopVerification from '@/Component/login-flow/TopVerification';
-import ResetPassword from '@/Component/login-flow/ResetPassword';
-const Login = () => {
+const ResentPassword = () => {
     return (
         <>
-            {/* <div className='w-full max-w-[1300px] sm:pb-9 pb-7 mx-auto sm:px-0 px-4 pt-14'>
+            <div className='w-full max-w-[1300px] sm:pb-9 pb-7 mx-auto sm:px-0 px-4 pt-14'>
                 <Image
                     src="/assets/images/logo.png"
                     alt="logo image"
@@ -105,12 +102,9 @@ const Login = () => {
                         </p>
                     </div>
                 </div>
-            </div> */}
-            {/* <ForgetPassword /> */}
-            {/* <TopVerification/> */}
-            <ResetPassword />
+            </div>
         </>
     )
 }
 
-export default Login;
+export default ResentPassword;
