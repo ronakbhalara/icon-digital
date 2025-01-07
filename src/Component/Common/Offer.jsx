@@ -3,11 +3,11 @@ import { PiPhone } from 'react-icons/pi'
 
 const Offer = () => {
     return (
-        <div className='bg-[#14519E] py-2.5 text-center text-white sm:text-sm_40/5 text-xs_40/5 sm:flex items-center justify-center sm:gap-x-2.5'>
+        <div className='bg-[#14519E] py-2.5 text-center text-white sm:text-sm text-[10px] sm:flex items-center justify-center sm:gap-x-2.5'>
             <span>  Welcome Offer</span> <p>Up to ₹ 45,000 Cashback, Bonus on Laptop Exchange.</p>
             <div className="flex items-center justify-end pt-2 sm:hidden gap-2">
                 <PiPhone size={15} />
-                <span className="text-xs pr-3">+91 85954 23549</span>
+                <span className="text-[10px] pr-3">+91 85954 23549</span>
             </div>
         </div>
     )

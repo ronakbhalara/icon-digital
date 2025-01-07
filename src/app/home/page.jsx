@@ -230,8 +230,8 @@ const Home = () => {
                             <h2 className='text-[#2B2A29] font-bold SF_Pro sm:text-[48px] text-3xl text-center'>Shop By Brands</h2>
                         </div>
                         <div className='flex justify-center pt-[60px]'>
-                            <div className='grid sm:gap-y-11 gap-y-7'>
-                                <div className='flex justify-center items-center flex-wrap sm:gap-x-16 gap-x-4 sm:gap-y-14 gap-y-7'>
+                            <div className='grid sm:gap-y-11 gap-y-7 sm:px-0 px-4'>
+                                <div className='flex sm:justify-center items-center flex-wrap sm:gap-x-16 gap-x-4 sm:gap-y-14 gap-y-7'>
                                     {Brands1.map((item, i) => (
                                         <Image
                                             src={item}
@@ -243,7 +243,7 @@ const Home = () => {
                                         />
                                     ))}
                                 </div>
-                                <div className='sm:grid flex justify-center sm:grid-cols-4 grid-cols-2 items-center flex-wrap sm:gap-x-16 gap-x-4 sm:gap-y-14 gap-y-7'>
+                                <div className='sm:grid flex sm:justify-center sm:grid-cols-4 grid-cols-2 items-center flex-wrap sm:gap-x-16 gap-x-4 sm:gap-y-14 gap-y-7'>
                                     {Brands2.map((item, i) => (
                                         <Image
                                             src={item}

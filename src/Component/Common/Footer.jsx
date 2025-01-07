@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { PiCopyright } from 'react-icons/pi';
 
 const Footer = () => {
   return (
@@ -70,8 +71,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className='flex flex-wrap sm:justify-center sm:pt-0 pt-8 md:justify-start text-[14px] sm:absolute bottom-10 gap-x-10 text-center md:text-left'>
-          <p className='cursor-pointer hover:underline'>Copyrights 2025 Icondigital.</p>
+        <div className='flex flex-wrap sm:justify-center sm:pt-0 pt-8 md:justify-start text-[14px] sm:absolute bottom-10 sm:gap-x-10 gap-x-8 sm:gap-y-0 gap-y-2 text-center md:text-left'>
+          <p className='cursor-pointer hover:underline flex items-center gap-x-1'>
+            <PiCopyright />  Copyrights 2025 Icondigital.
+          </p>
           <p className='cursor-pointer hover:underline'>Terms Of Sale</p>
           <p className='cursor-pointer hover:underline'>Privacy Statement</p>
           <p className='cursor-pointer hover:underline'>Cookie, Ads & Emails</p>

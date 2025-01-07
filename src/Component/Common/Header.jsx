@@ -21,7 +21,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="sm:py-6 py-3 border-b border-gray-300 bg-white">
+    <div className="sm:py-6 py-3 border-b border-gray-300 bg-white sticky top-0 left-0 z-50">
       <div className="w-full max-w-[1200px] mx-auto px-4">
         {/* Top Section */}
         <div className="flex items-center justify-between">
@@ -39,7 +39,7 @@ const Header = () => {
                 alt="logo image"
                 height={70}
                 width={150}
-                className="cursor-pointer sm:h-[50px] h-8 w-auto"
+                className="cursor-pointer sm:h-[50px] h-10 w-auto"
               />
             </Link>
           </div>

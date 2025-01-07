@@ -4,10 +4,14 @@ import Link from 'next/link';
 import ForgetPassword from '@/Component/login-flow/Forgetpassword';
 import TopVerification from '@/Component/login-flow/TopVerification';
 import ResetPassword from '@/Component/login-flow/ResetPassword';
+import { PiEye, PiEyeSlash } from 'react-icons/pi';
+import { useState } from 'react';
+import Head from 'next/head';
 const Login = () => {
+    const [showPassword, setShowPassword] = useState(false);
     return (
         <>
-            {/* <div className='w-full max-w-[1300px] sm:pb-9 pb-7 mx-auto sm:px-0 px-4 pt-14'>
+            <div className='w-full max-w-[1300px] sm:pb-9 pb-7 mx-auto sm:px-0 px-4 pt-14'>
                 <Image
                     src="/assets/images/logo.png"
                     alt="logo image"
@@ -35,11 +39,24 @@ const Login = () => {
                                 <label className="block text-sm font-medium text-[#2B2A29]">
                                     Enter your password
                                 </label>
-                                <input
-                                    type="password"
-                                    placeholder="Enter your password"
-                                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                                />
+                                <div className="mt-1 relative">
+                                    <input
+                                        type={showPassword ? "text" : "password"}
+                                        placeholder="Enter your password"
+                                        className="block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                                    />
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowPassword((prev) => !prev)}
+                                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 focus:outline-none"
+                                    >
+                                        {showPassword ? (
+                                            <span><PiEyeSlash size={20} /></span>
+                                        ) : (
+                                            <span><PiEye size={20} /></span>
+                                        )}
+                                    </button>
+                                </div>
 
                                 <div className='flex items-center justify-between'>
                                     <div className="flex items-center mt-3">
@@ -105,10 +122,10 @@ const Login = () => {
                         </p>
                     </div>
                 </div>
-            </div> */}
+            </div>
             {/* <ForgetPassword /> */}
             {/* <TopVerification/> */}
-            <ResetPassword />
+            {/* <ResetPassword /> */}
         </>
     )
 }
