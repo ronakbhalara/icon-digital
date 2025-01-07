@@ -76,7 +76,7 @@ const Header = () => {
 
       {/* Mobile Navigation Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 md:hidden block right-0 h-full w-64 bg-white shadow-lg transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 z-50`}
       >
         <div className="p-4 flex justify-between items-center border-b">
