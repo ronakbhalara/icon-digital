@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import WebLayout from '../../../Layout/WebLayout'
+import WebLayout from '../../Layout/WebLayout'
 import Image from 'next/image';
 import { PiArrowRight, PiPlus, PiShoppingCart, PiStarFill } from 'react-icons/pi';
 import { LiaAngleDownSolid, LiaAngleUpSolid } from 'react-icons/lia';

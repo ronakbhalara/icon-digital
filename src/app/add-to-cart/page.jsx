@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react'
 import { PiArrowArcRight, PiArrowRight } from 'react-icons/pi';
 
@@ -14,13 +15,15 @@ const AddToCart = () => {
     return (
         <>
             <div className='w-full max-w-[1300px] sm:pb-0 pb-7 mx-auto sm:px-0 px-4 pt-14'>
-                <Image
-                    src="/assets/images/logo.png"
-                    alt="logo image"
-                    height={70}
-                    width={150}
-                    className="cursor-pointer sm:h-[50px] h-9 w-auto"
-                />
+                <Link href="/">
+                    <Image
+                        src="/assets/images/logo.png"
+                        alt="logo image"
+                        height={70}
+                        width={150}
+                        className="cursor-pointer sm:h-[50px] h-9 w-auto"
+                    />
+                </Link>
                 <div className='mt-16 grid sm:grid-cols-7 grid-cols-1 border border-[#E9E9E9] sm:rounded-[20px] rounded-xl'>
                     <div className='col-span-5 sm:p-8 p-3 border-r border-[#E9E9E9]'>
                         <h3 className='text-2xl pb-4 border-b border-[#E9E9E9] font-semibold text-[#2B2A29] SF_Pro'>Add to Cart</h3>
@@ -100,13 +103,14 @@ const AddToCart = () => {
                             </div>
                         </div>
                         <div>
-                            <button
+                            <Link
                                 type="submit"
+                                href='/payment-method'
                                 className="bg-[#00A0E3] w-full flex gap-x-3 justify-center items-center rounded-[10px] text-white font-bold py-3  px-4 focus:outline-none "
                             >
-                                Submit
+                                Place Order
                                 <PiArrowRight size={20} />
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -1,13 +1,13 @@
 "use client"
 import React, { useState } from 'react'
-import WebLayout from '../../Layout/WebLayout'
+import WebLayout from '../Layout/WebLayout'
 import Image from 'next/image'
 import { HiChevronRight } from "react-icons/hi2";
 import { PiPencilSimpleLineLight, PiStarFill } from 'react-icons/pi';
 import Select from 'react-select';
 
 const page = () => {
-    const [activeSection, setActiveSection] = useState("MyWallet");
+    const [activeSection, setActiveSection] = useState("Profile Information");
     const [editableField, setEditableField] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [states, setStates] = useState([]);
@@ -244,7 +244,7 @@ const page = () => {
                 </div>
                 {/* Details Section */}
                 <div className="col-span-5 border sm:mt-0 mt-5 border-[#e3e1e1] p-5">
-                    
+
                     {activeSection === "Profile Information" && (
                         <div className='w-full max-w-[600px] pt-3'>
                             <div className='flex justify-between'>

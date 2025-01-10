@@ -1,9 +1,9 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import ForgetPassword from '@/Component/login-flow/Forgetpassword';
-import TopVerification from '@/Component/login-flow/TopVerification';
-import ResetPassword from '@/Component/login-flow/ResetPassword';
+import ForgetPassword from '../Component/login-flow/Forgetpassword';
+import TopVerification from '../Component/login-flow/TopVerification';
+import ResetPassword from '../Component/login-flow/ResetPassword';
 import { PiEye, PiEyeSlash } from 'react-icons/pi';
 import { useState } from 'react';
 import Head from 'next/head';

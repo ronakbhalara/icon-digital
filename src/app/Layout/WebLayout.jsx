@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
-import Header from '@/Component/Common/Header'
-import Footer from '@/Component/Common/Footer'
+import Header from '@/app/Component/Header'
+import Footer from '@/app/Component/Footer'
 
 const WebLayout = ({ children }) => {
   return (

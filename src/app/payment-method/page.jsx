@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react'
 import { PiArrowArcRight, PiArrowRight } from 'react-icons/pi';
 
@@ -10,13 +11,15 @@ const PaymentMethod = () => {
     return (
         <>
             <div className='w-full max-w-[1300px] sm:pb-9 pb-7 mx-auto sm:px-0 px-4 pt-14'>
-                <Image
-                    src="/assets/images/logo.png"
-                    alt="logo image"
-                    height={70}
-                    width={150}
-                    className="cursor-pointer sm:h-[50px] h-9 w-auto"
-                />
+                <Link href="/">
+                    <Image
+                        src="/assets/images/logo.png"
+                        alt="logo image"
+                        height={70}
+                        width={150}
+                        className="cursor-pointer sm:h-[50px] h-9 w-auto"
+                    />
+                </Link>
                 <div className='mt-16 grid sm:grid-cols-7 grid-cols-1 border border-[#E9E9E9] sm:rounded-[20px] rounded-xl'>
                     <div className='col-span-5 sm:p-8 p-3 pb-5 sm:border-r border-b border-[#E9E9E9]'>
                         {/* Tabs */}

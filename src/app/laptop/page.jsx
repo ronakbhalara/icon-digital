@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import WebLayout from '../../Layout/WebLayout'
+import WebLayout from '../Layout/WebLayout'
 import { LiaAngleDownSolid, LiaAngleUpSolid } from "react-icons/lia";
 import { PiArrowUpRight, PiShoppingCart } from 'react-icons/pi';
 import Image from 'next/image';

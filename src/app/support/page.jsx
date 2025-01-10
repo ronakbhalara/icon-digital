@@ -1,7 +1,7 @@
 
 "use client"
 import React, { useState } from 'react';
-import WebLayout from '../../Layout/WebLayout';
+import WebLayout from '../Layout/WebLayout';
 import Image from 'next/image';
 import { PiMailboxFill, PiMapPinFill, PiPhoneFill } from 'react-icons/pi';
 import { IoMailSharp } from "react-icons/io5";

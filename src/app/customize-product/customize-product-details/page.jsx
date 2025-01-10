@@ -1,5 +1,5 @@
 import React from 'react'
-import WebLayout from '../../../Layout/WebLayout'
+import WebLayout from '../../Layout/WebLayout'
 import { PiPlus } from 'react-icons/pi';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -169,7 +169,9 @@ const customizeProductDetails = () => {
                                 <p className='text-xs text-[#2B2A29] font-semibold'>14,850.00</p>
                             </div>
                             <div className='pt-6'>
-                                <button className='py-3 w-full text-base font-medium bg-linear-gradient capitalize text-white rounded-[10px] SF_Pro'>Add To Cart</button>
+                                <Link
+                                    href='/add-to-cart'
+                                    className='py-3 block text-center w-full text-base font-medium bg-linear-gradient capitalize text-white rounded-[10px] SF_Pro'>Add To Cart</Link>
                                 <button className='py-3 mt-4 w-full text-base_40/5 border border-[#C9C9C9] font-medium capitalize bg-[#DADADA] text-[#232323] rounded-[10px] SF_Pro'>Remove All</button>
                             </div>
                             <div className='pt-7 grid grid-cols-4 gap-x-4'>

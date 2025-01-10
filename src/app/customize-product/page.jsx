@@ -1,5 +1,5 @@
 import React from 'react'
-import WebLayout from '../../Layout/WebLayout'
+import WebLayout from '../Layout/WebLayout'
 import { PiPlus, PiShoppingCart } from 'react-icons/pi'
 import Image from 'next/image'
 import Link from 'next/link'

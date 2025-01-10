@@ -1,28 +1,10 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import WebLayout from '@/Layout/WebLayout'
+import WebLayout from '@/app/Layout/WebLayout'
 import Image from 'next/image'
-import { PiHeart, PiPhone, PiShoppingCart, PiStar, PiStarFill, PiUserCircle } from 'react-icons/pi'
-import Header from '@/app/ComponentR/Header'
-import Footer from '@/Component/Common/Footer'
-import Link from 'next/link'
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import { PiShoppingCart, PiStar, PiStarFill } from 'react-icons/pi'
 
 const Home = () => {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-    const header = [
-        { title: "Laptop", url: "/laptop" },
-        { title: "Desktop", url: "#" },
-        { title: "All In One", url: "#" },
-        { title: "Monitors", url: "#" },
-        { title: "Printer", url: "#" },
-        { title: "Pre-Build PC", url: "#" },
-        { title: "Accessories & Software", url: "#" },
-        { title: "Customize Product", url: "/customize-product" },
-        { title: "Support", url: "/support" },
-    ];
-
     const Processor = [
         "/assets/images/Processor-1.png",
         "/assets/images/Processor-2.png",
@@ -177,8 +159,7 @@ const Home = () => {
     ]
 
     return (
-        <>
-            <Header />
+        <WebLayout>
             <div className='overflow-hidden'>
                 {/* Banner  */}
                 <Image
@@ -553,9 +534,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
-            <Footer />
-        </>
+        </WebLayout >
     )
 }
 
