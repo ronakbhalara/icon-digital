@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import WebLayout from '@/Layout/WebLayout'
 import Image from 'next/image'
 import { PiShoppingCart, PiStar, PiStarFill } from 'react-icons/pi'
+import Header from '@/Component/Common/Header'
+import Footer from '@/Component/Common/Footer'
 
 const Home = () => {
     const Processor = [
@@ -159,7 +161,8 @@ const Home = () => {
     ]
 
     return (
-        <WebLayout>
+        <>
+            <Header />
             <div className='overflow-hidden'>
                 {/* Banner  */}
                 <Image
@@ -534,7 +537,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </WebLayout >
+
+            <Footer />
+        </>
     )
 }
 
