@@ -182,7 +182,7 @@ const Home = () => {
                     <div className='sm:px-0 px-4 sm:pt-0 pt-4'>
                         <h2 className='sm:text-[48px] text-3xl font-bold text-[#2B2A29] SF_Pro'>About Icon Digital</h2>
                         <p className='text-[#2B2A29] sm:pt-6 pt-2 max-w-[618px] font-medium sm:text-base_40/6 text-sm_40/5'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        <button className='px-9 py-[15px] button-linear-gradient text-base_40/5 font-medium text-white rounded-full mt-[35px] Outfit'>Read More</button>
+                        <button className='px-9 py-[15px] button-linear-gradient text-base_40/5 font-medium text-white rounded-full sm:mt-[35px] mt-7 Outfit'>Read More</button>
                     </div>
                     <Image
                         src="/assets/images/about-image.png"

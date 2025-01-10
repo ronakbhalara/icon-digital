@@ -32,7 +32,10 @@ const Footer = () => {
             <div>
               <h3 className='font-bold sm:text-lg text-md text-[#2B2A29]'>Account</h3>
               <div className='sm:pt-[25px] pt-3 text-[#4D4D4D] text-base space-y-3'>
-                <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>My Account</p>
+                <Link
+                  href="/profile"
+                  className='cursor-pointer hover:text-[#2B2A29] transition-colors'>My Account
+                </Link>
                 <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>Order Status</p>
                 <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>My Products</p>
               </div>
@@ -64,7 +67,10 @@ const Footer = () => {
               <h3 className='font-bold sm:text-lg text-md text-[#2B2A29]'>Connect With Us</h3>
               <div className='sm:pt-[25px] pt-3 text-[#4D4D4D] text-base space-y-3'>
                 <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>Community</p>
-                <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>Contact Us</p>
+                <Link
+                  href="login"
+                  className='cursor-pointer block hover:text-[#2B2A29] transition-colors'>Contact Us
+                </Link>
               </div>
             </div>
           </div>

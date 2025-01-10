@@ -24,7 +24,7 @@ const AddToCart = () => {
                         className="cursor-pointer sm:h-[50px] h-9 w-auto"
                     />
                 </Link>
-                <div className='mt-16 grid sm:grid-cols-7 grid-cols-1 border border-[#E9E9E9] sm:rounded-[20px] rounded-xl'>
+                <div className='sm:mt-16 mt-10 grid sm:grid-cols-7 grid-cols-1 border border-[#E9E9E9] sm:rounded-[20px] rounded-xl'>
                     <div className='col-span-5 sm:p-8 p-3 border-r border-[#E9E9E9]'>
                         <h3 className='text-2xl pb-4 border-b border-[#E9E9E9] font-semibold text-[#2B2A29] SF_Pro'>Add to Cart</h3>
                         <div className='mt-5 sm:border border-[#E9E9E9] rounded-xl sm:p-3 sm:flex sm:gap-x-5'>
@@ -76,7 +76,7 @@ const AddToCart = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-span-2 p-5 flex flex-col justify-between'>
+                    <div className='col-span-2 p-5 flex flex-col sm:gap-y-0 gap-y-6 justify-between'>
                         <div>
                             <p className='text-base text-[#333311] SF_Pro font-medium'>Summary</p>
                             <div className='pt-3 space-y-3 border-b pb-3 border-dashed border-[#CACACA]'>

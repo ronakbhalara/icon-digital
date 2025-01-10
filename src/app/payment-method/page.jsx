@@ -20,7 +20,7 @@ const PaymentMethod = () => {
                         className="cursor-pointer sm:h-[50px] h-9 w-auto"
                     />
                 </Link>
-                <div className='mt-16 grid sm:grid-cols-7 grid-cols-1 border border-[#E9E9E9] sm:rounded-[20px] rounded-xl'>
+                <div className='sm:mt-16 mt-10 grid sm:grid-cols-7 grid-cols-1 border border-[#E9E9E9] sm:rounded-[20px] rounded-xl'>
                     <div className='col-span-5 sm:p-8 p-3 pb-5 sm:border-r border-b border-[#E9E9E9]'>
                         {/* Tabs */}
                         <div className="flex max-w-[500px] gap-x-8">
@@ -332,7 +332,7 @@ const PaymentMethod = () => {
                         </div>
                     </div>
 
-                    <div className='col-span-2 p-5 pb-8 flex flex-col justify-between'>
+                    <div className='col-span-2 p-5 pb-8 flex sm:gap-y-0 gap-y-6 flex-col justify-between'>
                         <div>
                             <p className='text-base text-[#333311] SF_Pro font-medium'>Summary</p>
                             <div className='pt-3 space-y-3 border-b pb-3 border-dashed border-[#CACACA]'>

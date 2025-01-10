@@ -10,13 +10,15 @@ const SignUp = () => {
     return (
         <>
             <div className='w-full max-w-[1300px] sm:pb-9 pb-7 mx-auto sm:px-0 px-4 pt-14'>
-                <Image
-                    src="/assets/images/logo.png"
-                    alt="logo image"
-                    height={70}
-                    width={150}
-                    className="cursor-pointer sm:h-[50px] h-9 w-auto"
-                />
+                <Link href="/">
+                    <Image
+                        src="/assets/images/logo.png"
+                        alt="logo image"
+                        height={70}
+                        width={150}
+                        className="cursor-pointer sm:h-[50px] h-9 w-auto"
+                    />
+                </Link>
                 <div className="h-auto flex  justify-center mt-7">
                     <div className="bg-white shadow-[0px_4px_10px_0px_#2323231A] border border-[#E9E9E9] rounded-2xl sm:px-12 px-3 w-full max-w-[590px] p-8">
                         <h1 className="text-3xl SF_Pro font-bold mb-1 text-gray-800">Create an account</h1>
