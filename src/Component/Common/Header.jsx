@@ -29,7 +29,7 @@ const Header = () => {
           <span className="text-[10px] pr-3">+91 85954 23549</span>
         </div>
       </div>
-      {/* <div className="sm:py-6 py-3 border-b border-gray-300 bg-white sticky top-0 left-0 z-50">
+      <div className="sm:py-6 py-3 border-b border-gray-300 bg-white sticky top-0 left-0 z-50">
         <div className="w-full max-w-[1200px] mx-auto px-4">
           <div className="flex items-center justify-between">
 
@@ -107,7 +107,7 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(false)}
           />
         )}
-      </div> */}
+      </div>
     </>
   );
 };
