@@ -29,17 +29,14 @@ const Header = () => {
           <span className="text-[10px] pr-3">+91 85954 23549</span>
         </div>
       </div>
-      <div className="sm:py-6 py-3 border-b border-gray-300 bg-white sticky top-0 left-0 z-50">
+      {/* <div className="sm:py-6 py-3 border-b border-gray-300 bg-white sticky top-0 left-0 z-50">
         <div className="w-full max-w-[1200px] mx-auto px-4">
-          {/* Top Section */}
           <div className="flex items-center justify-between">
-            {/* Contact Info */}
+
             <div className="sm:flex items-center hidden gap-2 text-gray-800">
               <PiPhone size={20} />
               <span className="text-sm">+91 85954 23549</span>
             </div>
-
-            {/* Logo */}
             <div>
               <Link href="/">
                 <Image
@@ -52,7 +49,6 @@ const Header = () => {
               </Link>
             </div>
 
-            {/* Icons and Mobile Menu Toggle */}
             <div className="flex items-center gap-4 text-gray-800">
               <PiHeart size={24} className="cursor-pointer" />
               <PiShoppingCart size={24} className="cursor-pointer" />
@@ -68,7 +64,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="mt-8 hidden md:flex justify-center gap-6 text-gray-600 text-sm">
             {header.map((item, i) => (
               <Link
@@ -82,7 +77,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer */}
         <div
           className={`fixed top-0 md:hidden block right-0 h-full w-64 bg-white shadow-lg transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
             } transition-transform duration-300 z-50`}
@@ -107,14 +101,13 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Overlay for Mobile Menu */}
         {isMobileMenuOpen && (
           <div
             className="fixed inset-0 bg-black bg-opacity-60 z-40"
             onClick={() => setIsMobileMenuOpen(false)}
           />
         )}
-      </div>
+      </div> */}
     </>
   );
 };
