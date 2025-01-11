@@ -3,6 +3,12 @@ import React, { useEffect, useState } from 'react'
 import WebLayout from '@/app/Layout/WebLayout'
 import Image from 'next/image'
 import { PiShoppingCart, PiStar, PiStarFill } from 'react-icons/pi'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 const Home = () => {
     const Processor = [
@@ -158,6 +164,51 @@ const Home = () => {
         "/assets/images/insta-1.png",
     ]
 
+    const Similar_Products = [
+        {
+            image: "/assets/images/best-saller.png",
+            name: "Asus VivoBook s15",
+            Processor: "i5",
+            price: "51,000"
+        },
+        {
+            image: "/assets/images/best-saller.png",
+            name: "Asus VivoBook s15",
+            Processor: "i5",
+            price: "51,000"
+        },
+        {
+            image: "/assets/images/best-saller.png",
+            name: "Asus VivoBook s15",
+            Processor: "i5",
+            price: "51,000"
+        },
+        {
+            image: "/assets/images/best-saller.png",
+            name: "Asus VivoBook s15",
+            Processor: "i5",
+            price: "51,000"
+        },
+        {
+            image: "/assets/images/best-saller.png",
+            name: "Asus VivoBook s15",
+            Processor: "i5",
+            price: "51,000"
+        },
+        {
+            image: "/assets/images/best-saller.png",
+            name: "Asus VivoBook s15",
+            Processor: "i5",
+            price: "51,000"
+        },
+        {
+            image: "/assets/images/best-saller.png",
+            name: "Asus VivoBook s15",
+            Processor: "i5",
+            price: "51,000"
+        },
+    ]
+
     return (
         <WebLayout>
             <div className='overflow-hidden'>
@@ -179,10 +230,10 @@ const Home = () => {
                         width={960}
                         className='sm:w-[960px] sm:h-[600px]  sm:block hidden h-auto w-auto object-cover'
                     />
-                    <div className='sm:px-0 px-4 sm:pt-0 pt-4'>
+                    <div className='sm:px-0 px-4 sm:pt-0 pt-10'>
                         <h2 className='sm:text-[48px] text-3xl font-bold text-[#2B2A29] SF_Pro'>About Icon Digital</h2>
                         <p className='text-[#2B2A29] sm:pt-6 pt-2 max-w-[618px] font-medium sm:text-base_40/6 text-sm_40/5'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        <button className='px-9 py-[15px] button-linear-gradient text-base_40/5 font-medium text-white rounded-full sm:mt-[35px] mt-7 Outfit'>Read More</button>
+                        <button className='px-9 py-[15px] button-linear-gradient text-base_40/5 font-medium text-white rounded-full sm:mt-5 mt-7 Outfit'>Read More</button>
                     </div>
                     <Image
                         src="/assets/images/about-image.png"
@@ -203,10 +254,10 @@ const Home = () => {
                 {/* Shop By Processor */}
                 <div className="bg-[url('/assets/images/Processor-bg-image.png')] sm:h-[772px] h-auto w-auto bg-cover">
                     <div className='w-full max-w-[1200px] sm:px-0 px-4 mx-auto'>
-                        <div className='sm:pt-[84px] pt-10'>
+                        <div className='sm:pt-[84px] pt-14'>
                             <h2 className='text-[#2B2A29] font-bold sm:text-[48px] text-3xl text-center SF_Pro'>Shop By Processor</h2>
                         </div>
-                        <div className='flex justify-center sm:pt-[60px] pt-7'>
+                        <div className='flex justify-center sm:pt-[60px] pt-12'>
                             <div className='grid sm:grid-cols-4 grid-cols-3 items-center flex-wrap sm:gap-x-16 gap-x-5 sm:gap-y-14 gap-y-7'>
                                 {Processor.map((item, i) => (
                                     <Image
@@ -226,7 +277,7 @@ const Home = () => {
                 {/* Shop By Brands */}
                 <div className="bg-[url('/assets/images/Shop-By-Brands.png')] sm:h-[700px] h-auto w-auto bg-cover">
                     <div className='w-full max-w-[1200px] mx-auto'>
-                        <div className='pt-[55px]'>
+                        <div className='sm:pt-[55px] pt-14'>
                             <h2 className='text-[#2B2A29] font-bold SF_Pro sm:text-[48px] text-3xl text-center'>Shop By Brands</h2>
                         </div>
                         <div className='flex justify-center pt-[60px]'>
@@ -269,9 +320,9 @@ const Home = () => {
                         width={500}
                         className='absolute top-12 left-0 h-[750px] w-[600px] -z-30'
                     />
-                    <div className='w-full max-w-[1200px] sm:px-0 px-4 mx-auto sm:pt-[74px] pt-10'>
+                    <div className='w-full max-w-[1200px] sm:px-0 px-4 mx-auto sm:pt-[74px] pt-14'>
                         <h2 className='text-[#2B2A29] font-bold  sm:text-[48px] text-3xl  text-center SF_Pro'>Shop By Price</h2>
-                        <div className='sm:pt-[60px] pt-10 flex justify-center'>
+                        <div className='sm:pt-[60px] pt-14 flex justify-center'>
                             <div className='grid sm:grid-cols-4 grid-cols-2 sm:gap-x-[55px] gap-x-7 sm:gap-y-0 gap-y-5'>
                                 {Price.map((item, i) => (
                                     <Image
@@ -285,9 +336,9 @@ const Home = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className='sm:pt-[140px] pt-10'>
+                        <div className='sm:pt-[140px] pt-16'>
                             <h2 className='text-[#2B2A29] font-bold  sm:text-[48px] text-3xl text-center SF_Pro'>Shop By Use</h2>
-                            <div className='sm:pt-[78px] pt-9 grid sm:grid-cols-5 grid-cols-2 sm:gap-[80px] gap-6'>
+                            <div className='sm:pt-[78px] pt-14 grid sm:grid-cols-5 grid-cols-2 sm:gap-[80px] gap-6'>
                                 {Use.map((item, i) => (
                                     <div className='relative' key={i}>
                                         <Image
@@ -324,15 +375,15 @@ const Home = () => {
                             width={1000}
                             className='w-auto bg-cover h-[641px] absolute top-0'
                         />
-                        <div className='w-full z-30 max-w-[1200px] relative mx-auto sm:py-[130px] py-10 flex flex-wrap gap-x-[83px]'>
-                            <div className='sm:block flex justify-between sm:w-auto w-full items-center'>
+                        <div className='w-full BEST_SALLER z-30 max-w-[1200px] relative mx-auto sm:py-[130px] py-10 sm:grid grid-cols-5 gap-x-[83px]'>
+                            <div className='sm:block flex sm:justify-between justify-center sm:w-auto w-full col-span-1 items-center'>
                                 <div>
                                     <p className='text-white font-bold border-b border-white sm:text-4xl text-2xl inline-block SF_Pro'>Best Seller</p>
                                     <p className='sm:pt-5 pt-2.5 text-white text-xl_40/7 SF_Pro'>New Arrivals</p>
                                 </div>
-                                <button className='px-9 py-[15px] bg-white text-[#14519E] sm:text-base_40/5 text-sm font-medium rounded-full sm:mt-[240px]'>Read More</button>
+                                <button className='px-9 py-[15px] sm:block hidden bg-white text-[#14519E] sm:text-base_40/5 text-sm font-medium rounded-full sm:mt-[240px]'>Read More</button>
                             </div>
-                            <div className='flex flex-wrap justify-center gap-[15px] sm:pt-0 pt-7'>
+                            {/* <div className='flex flex-wrap justify-center gap-[15px] sm:pt-0 pt-7'>
                                 {Best_seller.map((item, i) => (
                                     <div className='h-[382px] w-auto bg-white rounded-[20px] pr-3.5 pt-[57px] pl-[23px] pb-[15px]' key={i}>
                                         <Image
@@ -354,6 +405,55 @@ const Home = () => {
                                         </div>
                                     </div>
                                 ))}
+                            </div> */}
+
+                            <div className='col-span-4 sm:pt-0 pt-10'>
+                                <Swiper
+                                    modules={[Navigation, Pagination, Autoplay]}
+                                    spaceBetween={20}
+                                    slidesPerView={1}
+                                    pagination={{ clickable: true }}
+                                    autoplay={{ delay: 3000 }}
+                                    breakpoints={{
+                                        640: { slidesPerView: 1 },
+                                        768: { slidesPerView: 2 },
+                                        1024: { slidesPerView: 3 },
+                                    }}
+                                    className='pt-7'
+                                >
+                                    {Similar_Products.map((item, i) => (
+                                        <SwiperSlide key={i}>
+                                            <div className='h-[382px] w-auto bg-white rounded-[20px] pr-3.5 pt-[57px] pl-[23px] pb-[15px]'>
+                                                <Image
+                                                    src={item.image}
+                                                    alt='Similar Product'
+                                                    height={200}
+                                                    width={300}
+                                                    className='w-auto h-[170px]'
+                                                />
+                                                <div className='flex items-end justify-between'>
+                                                    <div>
+                                                        <p className='pt-[22px] text-[#2B2A29] text-lg_40/6 font-bold SF_Pro'>
+                                                            {item.name}
+                                                        </p>
+                                                        <p className='pt-[2px] text-[#2B2A29] text-sm_40/5'>
+                                                            Processor {item.Processor}
+                                                        </p>
+                                                        <p className='pt-4 text-xl_36 text-[#2B2A29] font-bold'>
+                                                            ₹ {item.price}
+                                                        </p>
+                                                    </div>
+                                                    <div className='button-linear-gradient text-white cursor-pointer h-[50px] w-[52px] rounded-full flex justify-center items-center'>
+                                                        <PiShoppingCart size={24} />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                                <div className='flex justify-end sm:hidden'>
+                                    <button className='px-9 sm:mt-[240px] mt-8 py-[15px] bg-white text-[#14519E] sm:text-base_40/5 text-sm font-medium rounded-full'>Read More</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -380,10 +480,10 @@ const Home = () => {
 
 
                 {/* service block */}
-                <div className='sm:pt-[130px] pt-10'>
+                <div className='sm:pt-[130px] pt-16'>
                     <div className='w-full max-w-[1200px] sm:px-0 px-4 mx-auto'>
                         <h2 className='text-[#2B2A29] font-bold sm:text-[48px] text-3xl text-center SF_Pro'>We're Here to Help You</h2>
-                        <div className='sm:pt-[80px] pt-10 grid sm:grid-cols-4 grid-cols-2 sm:gap-11 gap-5'>
+                        <div className='sm:pt-[80px] pt-14 grid sm:grid-cols-4 grid-cols-2 sm:gap-11 gap-5'>
                             {Service.map((item, i) => (
                                 <div className='' key={i}>
                                     <div className='flex justify-center'>
@@ -406,10 +506,10 @@ const Home = () => {
                 </div>
 
                 {/* Customer block */}
-                <div className='sm:pt-[130px] pt-10'>
+                <div className='sm:pt-[130px] pt-16'>
                     <div className='w-full max-w-[1200px] sm:px-0 px-4 mx-auto'>
                         <h2 className='text-[#2B2A29] font-bold sm:text-[48px] text-3xl text-center SF_Pro'>What Customer Say</h2>
-                        <div className='sm:pt-10 pt-7 grid sm:grid-cols-4 grid-cols-1 gap-5'>
+                        <div className='sm:pt-10 pt-12 grid sm:grid-cols-4 grid-cols-1 gap-5'>
                             {Customer.map((item, i) => (
                                 <div className='border border-[#D7D7D7] rounded-[20px] sm:py-[30px] py-4 px-5' key={i}>
                                     <div className='text-[#FDCE15] flex gap-x-[5px]'>

@@ -1,10 +1,14 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import WebLayout from '../../Layout/WebLayout'
 import { PiPlus } from 'react-icons/pi';
 import Link from 'next/link';
 import Image from 'next/image';
+import CostomizeProductModel from "../../Component/customize/CostomizeProductModel"
 
 const customizeProductDetails = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const PC_Details = [
         {
@@ -143,6 +147,10 @@ const customizeProductDetails = () => {
                                     <div className='flex items-end'>
                                         <Link
                                             href="#"
+                                            onClick={(e) => {
+                                                e.preventDefault(); // To prevent the default anchor behavior
+                                                setIsModalOpen(true); // Open the modal
+                                            }}
                                             className='button-linear-gradient text-white cursor-pointer h-[40px] w-[40px] rounded-full flex justify-center items-center'
                                         >
                                             <PiPlus size={24} />
@@ -214,6 +222,10 @@ const customizeProductDetails = () => {
                     </div>
                 </div>
             </div>
+            <CostomizeProductModel
+                isModalOpen={isModalOpen}
+                setIsModalOpen={setIsModalOpen}
+            />
         </WebLayout>
     )
 }

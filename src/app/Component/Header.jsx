@@ -22,13 +22,24 @@ const Header = () => {
 
   return (
     <>
-      <div className='bg-[#14519E] py-2.5 text-center text-white sm:text-sm text-[10px] sm:flex items-center justify-center sm:gap-x-2.5'>
+      <div className='bg-[#14519E] hidden py-2.5 text-center text-white sm:text-sm text-[10px] sm:flex items-center justify-center sm:gap-x-2.5'>
         <span>  Welcome Offer</span> <p>Up to ₹ 45,000 Cashback, Bonus on Laptop Exchange.</p>
         <div className="flex items-center justify-end pt-2 sm:hidden gap-2">
           <PiPhone size={15} />
           <span className="text-[10px] pr-3">+91 85954 23549</span>
         </div>
       </div>
+
+      <div className='bg-[#14519E] overflow-hidden sm:hidden block py-2.5 text-center text-white sm:text-sm text-[10px]'>
+        <p className="marquee">Welcome Offer Up to ₹ 45,000 Cashback, Bonus on Laptop Exchange.
+          Welcome Offer Up to ₹ 45,000 Cashback, Bonus on Laptop Exchange.
+        </p>
+        <div className="flex items-center justify-end pt-2 sm:hidden gap-2">
+          <PiPhone size={15} />
+          <span className="text-[10px] pr-3">+91 85954 23549</span>
+        </div>
+      </div>
+
       <div className="sm:py-6 py-3 border-b border-gray-300 bg-white sticky top-0 left-0 z-50">
         <div className="w-full max-w-[1200px] mx-auto px-4">
           <div className="flex items-center justify-between">

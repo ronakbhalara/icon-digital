@@ -101,3 +101,13 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield; /* For Firefox */
 }
+
+.BEST_SALLER .swiper-pagination {
+    position: relative !important;
+    margin-top: 30px !important;
+    color: white !important;
+}
+
+.BEST_SALLER .swiper-pagination-bullet-active {
+    background: white !important;
+}
