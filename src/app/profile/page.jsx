@@ -7,7 +7,7 @@ import { PiPencilSimpleLineLight, PiStarFill } from 'react-icons/pi';
 import Select from 'react-select';
 
 const page = () => {
-    const [activeSection, setActiveSection] = useState("Profile Information");
+    const [activeSection, setActiveSection] = useState("MyOrder");
     const [editableField, setEditableField] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [states, setStates] = useState([]);
@@ -144,7 +144,7 @@ const page = () => {
                     </div>
                     <div className='border mt-4 border-[#e3e1e1]'>
                         <div className='px-5 border-b border-[#e3e1e1] py-2.5 gap-x-5 justify-between flex items-center'>
-                            <div className='flex items-center gap-x-4'>
+                            <div className='flex items-center gap-x-4 w-full'>
                                 <Image
                                     src="/assets/images/shopping-cart-check.svg"
                                     alt="user image"
@@ -152,7 +152,16 @@ const page = () => {
                                     height={50}
                                     width={50}
                                 />
-                                <p className='text-[#5C5C5C] text-base font-medium'>My Order</p>
+                                {/* <p className='text-[#5C5C5C] text-base font-medium'>My Order</p> */}
+                                <p
+                                    className={`py-2.5 pl-9 cursor-pointer text-base w-full font-medium ${activeSection === "MyOrder"
+                                        ? "text-[#14519E] bg-[#00A0E31A]"
+                                        : "text-[#9A9A9A]"
+                                        }`}
+                                    onClick={() => setActiveSection("MyOrder")}
+                                >
+                                    My Order
+                                </p>
                             </div>
                             <HiChevronRight className='text-[#9A9A9A]' size={20} />
                         </div>
@@ -243,8 +252,15 @@ const page = () => {
                     </div>
                 </div>
                 {/* Details Section */}
-                <div className="col-span-5 border sm:mt-0 mt-5 border-[#e3e1e1] p-5">
+                <div className="col-span-5 border sm:mt-0 mt-5 border-[#e3e1e1] overflow-y-auto p-5">
 
+                    {activeSection === "MyOrder" && (
+                        <div className='w-full max-w-[600px] pt-3'>
+                            <h3 className='text-base font-medium text-[#2B2A29]'>
+                                MyOrder
+                            </h3>
+                        </div>
+                    )}
                     {activeSection === "Profile Information" && (
                         <div className='w-full max-w-[600px] pt-3'>
                             <div className='flex justify-between'>

@@ -4,10 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { PiHeart, PiPhone, PiShoppingCart, PiUserCircle } from "react-icons/pi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { CiSearch } from "react-icons/ci";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
   const header = [
     { title: "Laptop", url: "/laptop" },
     { title: "Desktop", url: "#" },
@@ -61,6 +66,32 @@ const Header = () => {
             </div>
 
             <div className="flex items-center gap-4 text-gray-800">
+              <div className="border hidden border-gray-300 md:flex items-center gap-x-2 pr-2 pl-2  w-56 py-2.5 rounded-lg">
+                <CiSearch size={24} />
+                <input type="search" className="outline-none" />
+              </div>
+              <div
+                className={`fixed top-[122px] right-0 z-50 w-full bg-white p-5 transition-transform duration-300 ${isOpen ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
+                  }`}
+                style={{ pointerEvents: isOpen ? "auto" : "none" }}
+              >
+                <div className="border border-gray-300 pr-2 pl-2 w-full py-2.5 rounded-lg">
+                  <input
+                    type="search"
+                    className="outline-none w-full"
+                    placeholder="Search Your Category"
+                  />
+                </div>
+              </div>
+
+              {/* Overlay (optional, for closing the modal when clicking outside) */}
+              {isOpen && (
+                <div
+                  className="fixed inset-0"
+                  onClick={toggleModal}
+                ></div>
+              )}
+              <CiSearch size={24} className="cursor-pointer md:hidden" onClick={toggleModal} />
               <PiHeart size={24} className="cursor-pointer" />
               <PiShoppingCart size={24} className="cursor-pointer" />
               <Link href="/profile">
