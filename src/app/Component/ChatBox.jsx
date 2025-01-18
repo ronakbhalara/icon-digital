@@ -104,11 +104,11 @@ export default function ChatBox() {
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             placeholder="Type your message..."
-                            className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
+                            className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none"
                         />
                         <button
                             onClick={() => handleSendMessage(input)}
-                            className="ml-2 p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
+                            className="ml-2 p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none"
                         >
                             Send
                         </button>

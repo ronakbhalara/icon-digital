@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import Link from 'next/link'
 
 const Home = () => {
     const Processor = [
@@ -494,7 +495,7 @@ const Home = () => {
                                             alt='service'
                                             height={60}
                                             width={60}
-                                            className='w-auto h-[60px]'
+                                            className='w-auto sm:h-[60px] h-10'
                                         />
                                     </div>
                                     <p className='sm:pt-[30px] pt-3 font-bold text-[#2B2A29] sm:text-lg_40/7 text-md_40 text-center SF_Pro'>{item.title}</p>
@@ -566,23 +567,27 @@ const Home = () => {
                             ))}
                         </div>
 
-                        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                            <div className='sm:h-[400px] sm:w-[688px] h-[250px] w-auto relative'>
+                        <div className='absolute sm:w-auto w-full top-1/2 sm:left-1/2 transform sm:-translate-x-1/2 -translate-y-1/2'>
+                            <div className='sm:h-[400px] sm:w-[688px] h-[250px] w-full relative'>
                                 <div className='sm:h-[50%] h-[70%] pt-5 pl-7 pr-5 bg-white'>
                                     <div className='flex justify-end items-center gap-x-[25px]'>
-                                        <Image
-                                            src="/assets/images/instagram.png"
-                                            alt='social image'
-                                            height={40}
-                                            width={40}
-                                            className='w-auto sm:h-10 h-5 cursor-pointer object-cover'
-                                        />
+                                        <Link
+                                            target='_blank'
+                                            href="https://www.instagram.com/icon_digital_itstore/">
+                                            <Image
+                                                src="/assets/images/instagram.png"
+                                                alt='social image'
+                                                height={40}
+                                                width={40}
+                                                className='w-auto sm:h-10 h-6 cursor-pointer object-cover'
+                                            />
+                                        </Link>
                                         <Image
                                             src="/assets/images/whatsapp.png"
                                             alt='social image'
                                             height={40}
                                             width={40}
-                                            className='w-auto sm:h-10 h-5 cursor-pointer object-cover'
+                                            className='w-auto sm:h-10 h-6 cursor-pointer object-cover'
                                         />
                                     </div>
                                     <div className='flex items-center gap-x-6 sm:pt-0 pt-5'>

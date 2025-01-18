@@ -5,7 +5,7 @@ import { PiCopyright } from 'react-icons/pi';
 
 const Footer = () => {
   return (
-    <div className='sm:h-[503px] -z-10 h-auto bg-[#F5F5F5] sm:pt-[100px] mt-10 pt-9 pb-[62px] relative'>
+    <div className='sm:h-[503px] h-auto bg-[#F5F5F5] sm:pt-[100px] mt-20 pt-9 pb-[62px] relative'>
       <div className='w-full max-w-[1300px] mx-auto px-5'>
         {/* Top Section */}
         <div className='flex flex-col md:flex-row sm:gap-10 gap-5 md:gap-x-7'>
@@ -30,13 +30,13 @@ const Footer = () => {
           <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-7'>
             {/* Account Section */}
             <div>
-              <h3 className='font-bold sm:text-lg text-md text-[#2B2A29]'>Account</h3>
+              <h3 className='font-bold sm:text-lg text-md text-[#2B2A29]'>My Icon Digital</h3>
               <div className='sm:pt-[25px] pt-3 text-[#4D4D4D] text-base space-y-3'>
                 <Link
                   href="/profile"
                   className='cursor-pointer hover:text-[#2B2A29] transition-colors'>My Account
                 </Link>
-                <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>Order Status</p>
+                <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>Track My Order</p>
                 <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>My Products</p>
               </div>
             </div>
@@ -45,9 +45,26 @@ const Footer = () => {
             <div>
               <h3 className='font-bold sm:text-lg text-md text-[#2B2A29]'>Support</h3>
               <div className='sm:pt-[25px] pt-3 text-[#4D4D4D] text-base space-y-3'>
-                <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>Support Home</p>
-                <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>Technical Support</p>
-                <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>Returns</p>
+                <Link
+                  href="/our-stors"
+                  className='cursor-pointer block hover:text-[#2B2A29] transition-colors'>Our Stors
+                </Link>
+                <Link
+                  href="/privacy-policy"
+                  className='cursor-pointer block hover:text-[#2B2A29] transition-colors'>Privacy Policy
+                </Link>
+                <Link
+                  href="shipping-policy"
+                  className='cursor-pointer block hover:text-[#2B2A29] transition-colors'>Shipping Policy</Link>
+                <Link
+                  href="return-policy"
+                  className='cursor-pointer block hover:text-[#2B2A29] transition-colors'>Return Policy</Link>
+                <Link
+                  href="cancellation"
+                  className='cursor-pointer block hover:text-[#2B2A29] transition-colors'>Cancellation Policy</Link>
+                <Link
+                  href="terms-conditions"
+                  className='cursor-pointer block hover:text-[#2B2A29] transition-colors'>Terms & Conditions</Link>
               </div>
             </div>
 
@@ -66,11 +83,15 @@ const Footer = () => {
             <div>
               <h3 className='font-bold sm:text-lg text-md text-[#2B2A29]'>Connect With Us</h3>
               <div className='sm:pt-[25px] pt-3 text-[#4D4D4D] text-base space-y-3'>
-                <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>Community</p>
                 <Link
-                  href="login"
+                  href="about-us"
+                  className='cursor-pointer block hover:text-[#2B2A29] transition-colors'>About Us
+                </Link>
+                <Link
+                  href="contact-us"
                   className='cursor-pointer block hover:text-[#2B2A29] transition-colors'>Contact Us
                 </Link>
+                <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>Community</p>
               </div>
             </div>
           </div>
@@ -78,13 +99,17 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className='flex flex-wrap sm:justify-center sm:pt-0 pt-8 md:justify-start text-[14px] sm:absolute bottom-10 sm:gap-x-10 gap-x-8 sm:gap-y-0 gap-y-2 text-center md:text-left'>
-          <p className='cursor-pointer hover:underline flex items-center gap-x-1'>
+          <p className='hover:underline flex items-center gap-x-1'>
             <PiCopyright />  Copyrights 2025 Icondigital.
           </p>
-          <p className='cursor-pointer hover:underline'>Terms Of Sale</p>
-          <p className='cursor-pointer hover:underline'>Privacy Statement</p>
-          <p className='cursor-pointer hover:underline'>Cookie, Ads & Emails</p>
-          <p className='cursor-pointer hover:underline'>Legal & Regulatory</p>
+          <Link
+            href="/terms-conditions"
+            className='cursor-pointer hover:underline'>Terms & Conditions
+          </Link>
+          <Link
+            href="/privacy-policy"
+            className='cursor-pointer hover:underline'>Privacy Policy
+          </Link>
         </div>
       </div>
     </div>
