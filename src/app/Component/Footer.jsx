@@ -5,7 +5,7 @@ import { PiCopyright } from 'react-icons/pi';
 
 const Footer = () => {
   return (
-    <div className='sm:h-[503px] h-auto bg-[#F5F5F5] sm:pt-[100px] mt-10 pt-9 pb-[62px] relative'>
+    <div className='sm:h-[503px] -z-10 h-auto bg-[#F5F5F5] sm:pt-[100px] mt-10 pt-9 pb-[62px] relative'>
       <div className='w-full max-w-[1300px] mx-auto px-5'>
         {/* Top Section */}
         <div className='flex flex-col md:flex-row sm:gap-10 gap-5 md:gap-x-7'>

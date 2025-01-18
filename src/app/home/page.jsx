@@ -218,7 +218,7 @@ const Home = () => {
                     alt='Banner image'
                     height={800}
                     width={1950}
-                    className=''
+                    className='sm:h-auto object-cover h-[500px] w-auto'
                 />
 
                 {/* About Block  */}
@@ -233,14 +233,14 @@ const Home = () => {
                     <div className='sm:px-0 px-4 sm:pt-0 pt-10'>
                         <h2 className='sm:text-[48px] text-3xl font-bold text-[#2B2A29] SF_Pro'>About Icon Digital</h2>
                         <p className='text-[#2B2A29] sm:pt-6 pt-2 max-w-[618px] font-medium sm:text-base_40/6 text-sm_40/5'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        <button className='px-9 py-[15px] button-linear-gradient text-base_40/5 font-medium text-white rounded-full sm:mt-5 mt-7 Outfit'>Read More</button>
+                        <button className='sm:px-9 px-6 sm:py-[15px] py-3 button-linear-gradient text-base_40/5 font-medium text-white rounded-full sm:mt-5 mt-4 Outfit'>Read More</button>
                     </div>
                     <Image
                         src="/assets/images/about-image.png"
                         alt='About image'
                         height={650}
                         width={960}
-                        className='sm:w-[960px] sm:hidden block sm:pt-0 pt-4 sm:h-[600px] h-auto w-auto object-cover'
+                        className='sm:w-[960px] sm:hidden block sm:pt-0 pt-8 sm:h-[600px] h-auto w-auto object-cover'
                     />
                     <Image
                         src="/assets/images/about-bg-image.png"
@@ -252,7 +252,7 @@ const Home = () => {
                 </div>
 
                 {/* Shop By Processor */}
-                <div className="bg-[url('/assets/images/Processor-bg-image.png')] sm:h-[772px] h-auto w-auto bg-cover">
+                <div className="bg-[url('/assets/images/Processor-bg-image.png')] sm:h-[677px] h-auto w-auto bg-cover">
                     <div className='w-full max-w-[1200px] sm:px-0 px-4 mx-auto'>
                         <div className='sm:pt-[84px] pt-14'>
                             <h2 className='text-[#2B2A29] font-bold sm:text-[48px] text-3xl text-center SF_Pro'>Shop By Processor</h2>
@@ -275,7 +275,7 @@ const Home = () => {
                 </div>
 
                 {/* Shop By Brands */}
-                <div className="bg-[url('/assets/images/Shop-By-Brands.png')] sm:h-[700px] h-auto w-auto bg-cover">
+                <div className="bg-[url('/assets/images/Shop-By-Brands.png')] sm:h-[600px] h-auto w-auto bg-cover">
                     <div className='w-full max-w-[1200px] mx-auto'>
                         <div className='sm:pt-[55px] pt-14'>
                             <h2 className='text-[#2B2A29] font-bold SF_Pro sm:text-[48px] text-3xl text-center'>Shop By Brands</h2>
@@ -373,7 +373,7 @@ const Home = () => {
                             alt='Best Seller background'
                             height={650}
                             width={1000}
-                            className='w-auto bg-cover h-[641px] absolute top-0'
+                            className='w-auto bg-cover h-[641px] absolute sm:top-0 bottom-0'
                         />
                         <div className='w-full BEST_SALLER z-30 max-w-[1200px] relative mx-auto sm:py-[130px] py-10 sm:grid grid-cols-5 gap-x-[83px]'>
                             <div className='sm:block flex sm:justify-between justify-center sm:w-auto w-full col-span-1 items-center'>
@@ -424,13 +424,15 @@ const Home = () => {
                                     {Similar_Products.map((item, i) => (
                                         <SwiperSlide key={i}>
                                             <div className='h-[382px] w-auto bg-white rounded-[20px] pr-3.5 pt-[57px] pl-[23px] pb-[15px]'>
-                                                <Image
-                                                    src={item.image}
-                                                    alt='Similar Product'
-                                                    height={200}
-                                                    width={300}
-                                                    className='w-auto h-[170px]'
-                                                />
+                                                <div className='flex justify-center'>
+                                                    <Image
+                                                        src={item.image}
+                                                        alt='Similar Product'
+                                                        height={200}
+                                                        width={300}
+                                                        className='w-auto h-[170px]'
+                                                    />
+                                                </div>
                                                 <div className='flex items-end justify-between'>
                                                     <div>
                                                         <p className='pt-[22px] text-[#2B2A29] text-lg_40/6 font-bold SF_Pro'>
@@ -452,7 +454,7 @@ const Home = () => {
                                     ))}
                                 </Swiper>
                                 <div className='flex justify-end sm:hidden'>
-                                    <button className='px-9 sm:mt-[240px] mt-8 py-[15px] bg-white text-[#14519E] sm:text-base_40/5 text-sm font-medium rounded-full'>Read More</button>
+                                    <button className='sm:px-9 px-6 sm:mt-[240px] mt-8 sm:py-[15px] py-3 bg-white text-[#14519E] sm:text-base_40/5 text-sm font-medium rounded-full'>Read More</button>
                                 </div>
                             </div>
                         </div>
@@ -584,33 +586,33 @@ const Home = () => {
                                         />
                                     </div>
                                     <div className='flex items-center gap-x-6 sm:pt-0 pt-5'>
-                                        <div className='sm:h-[80px] h-10 w-10 sm:w-[80px] flex justify-center items-center rounded-full border border-[#D7D7D7]'>
+                                        <div className='sm:h-[80px] h-14 w-14 sm:w-[80px] flex justify-center items-center rounded-full border border-[#D7D7D7]'>
                                             <Image
                                                 src="/assets/images/logo.png"
                                                 alt='logo image'
                                                 height={100}
                                                 width={100}
-                                                className='w-[auto] sm:h-[20px] h-2 cursor-pointer object-cover'
+                                                className='w-[auto] sm:h-[20px] h-4  cursor-pointer object-cover'
                                             />
                                         </div>
                                         <div className='flex items-center gap-x-5'>
-                                            <div className='sm:text-sm_40/5 text-xs_40/4 font-extrabold text-[#2B2A29] text-center tracking-[1px]'>
+                                            <div className='sm:text-sm text-xs font-extrabold text-[#2B2A29] text-center tracking-[1px]'>
                                                 <p>77</p>
                                                 <p>posts</p>
                                             </div>
-                                            <div className='sm:text-sm_40/5 text-xs_40/4 font-extrabold text-[#2B2A29] text-center tracking-[1px]'>
+                                            <div className='sm:text-sm text-xs font-extrabold text-[#2B2A29] text-center tracking-[1px]'>
                                                 <p>6,392</p>
                                                 <p>followers</p>
                                             </div>
-                                            <div className='sm:text-sm_40/5 text-xs_40/4 font-extrabold text-[#2B2A29] text-center tracking-[1px]'>
+                                            <div className='sm:text-sm text-xs font-extrabold text-[#2B2A29] text-center tracking-[1px]'>
                                                 <p>44</p>
                                                 <p>following</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='flex items-center gap-3 pl-4 pt-5'>
-                                        <h3 className='gradient-text text-base_40/5 font-bold'>Ph No.</h3>
-                                        <p className='text-[#2B2A29] text-base_40/5 font-medium SF_Pro'>+91 99798 53648</p>
+                                    <div className='flex items-center gap-3 sm:pl-4 pt-5'>
+                                        <h3 className='gradient-text text-base font-bold'>Ph No.</h3>
+                                        <p className='text-[#2B2A29] text-base font-medium SF_Pro'>+91 99798 53648</p>
                                     </div>
                                 </div>
                                 <div className='bg-linear-gradient sm:h-[50%] h-[30%] flex justify-center items-center'>

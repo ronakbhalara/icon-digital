@@ -40,7 +40,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="sm:py-6 py-3 border-b border-gray-300 bg-white sticky top-0 left-0 z-50">
+      <div className="sm:py-6 py-3  border-b border-gray-300 bg-white sticky top-0 left-0 z-40">
         <div className="w-full max-w-[1200px] mx-auto px-4">
           <div className="flex items-center justify-between">
 
