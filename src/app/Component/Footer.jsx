@@ -36,7 +36,12 @@ const Footer = () => {
                   href="/profile"
                   className='cursor-pointer hover:text-[#2B2A29] transition-colors'>My Account
                 </Link>
-                <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>Track My Order</p>
+                <Link
+                  href="/profile?section=MyOrder"
+                  className="cursor-pointer block hover:text-[#2B2A29] transition-colors"
+                >
+                  Track My Order
+                </Link>
                 <p className='cursor-pointer hover:text-[#2B2A29] transition-colors'>My Products</p>
               </div>
             </div>

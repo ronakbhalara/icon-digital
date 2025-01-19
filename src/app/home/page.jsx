@@ -283,7 +283,7 @@ const Home = () => {
                         </div>
                         <div className='flex justify-center pt-[60px]'>
                             <div className='grid sm:gap-y-11 gap-y-7 sm:px-0 px-4'>
-                                <div className='flex sm:justify-center items-center flex-wrap sm:gap-x-16 gap-x-4 sm:gap-y-14 gap-y-7'>
+                                <div className='flex justify-center items-center flex-wrap sm:gap-x-16 gap-x-4 sm:gap-y-14 gap-y-7'>
                                     {Brands1.map((item, i) => (
                                         <Image
                                             src={item}
@@ -295,7 +295,7 @@ const Home = () => {
                                         />
                                     ))}
                                 </div>
-                                <div className='sm:grid flex sm:justify-center sm:grid-cols-4 grid-cols-2 items-center flex-wrap sm:gap-x-16 gap-x-4 sm:gap-y-14 gap-y-7'>
+                                <div className='sm:grid flex justify-center sm:grid-cols-4 grid-cols-2 items-center flex-wrap sm:gap-x-16 gap-x-4 sm:gap-y-14 gap-y-7'>
                                     {Brands2.map((item, i) => (
                                         <Image
                                             src={item}
@@ -319,7 +319,7 @@ const Home = () => {
                         alt=""
                         height={800}
                         width={500}
-                        className='absolute top-12 left-0 h-[750px] w-[600px] -z-30'
+                        className='absolute top-12 left-0 h-[750px] w-auto -z-30'
                     />
                     <div className='w-full max-w-[1200px] sm:px-0 px-4 mx-auto sm:pt-[74px] pt-14'>
                         <h2 className='text-[#2B2A29] font-bold  sm:text-[48px] text-3xl  text-center SF_Pro'>Shop By Price</h2>
@@ -339,7 +339,7 @@ const Home = () => {
                         </div>
                         <div className='sm:pt-[140px] pt-16'>
                             <h2 className='text-[#2B2A29] font-bold  sm:text-[48px] text-3xl text-center SF_Pro'>Shop By Use</h2>
-                            <div className='sm:pt-[78px] pt-14 grid sm:grid-cols-5 grid-cols-2 sm:gap-[80px] gap-6'>
+                            <div className='sm:pt-[78px] pt-14 sm:grid sm:grid-cols-5 flex justify-center flex-wrap sm:gap-[80px] gap-10'>
                                 {Use.map((item, i) => (
                                     <div className='relative' key={i}>
                                         <Image
@@ -380,34 +380,10 @@ const Home = () => {
                             <div className='sm:block flex sm:justify-between justify-center sm:w-auto w-full col-span-1 items-center'>
                                 <div>
                                     <p className='text-white font-bold border-b border-white sm:text-4xl text-2xl inline-block SF_Pro'>Best Seller</p>
-                                    <p className='sm:pt-5 pt-2.5 text-white text-xl_40/7 SF_Pro'>New Arrivals</p>
+                                    <p className='sm:pt-5 pt-2.5 sm:text-left text-center text-white text-xl_40/7 SF_Pro'>New Arrivals</p>
                                 </div>
                                 <button className='px-9 py-[15px] sm:block hidden bg-white text-[#14519E] sm:text-base_40/5 text-sm font-medium rounded-full sm:mt-[240px]'>Read More</button>
                             </div>
-                            {/* <div className='flex flex-wrap justify-center gap-[15px] sm:pt-0 pt-7'>
-                                {Best_seller.map((item, i) => (
-                                    <div className='h-[382px] w-auto bg-white rounded-[20px] pr-3.5 pt-[57px] pl-[23px] pb-[15px]' key={i}>
-                                        <Image
-                                            src={item?.image}
-                                            alt='Best Seller'
-                                            height={200}
-                                            width={300}
-                                            className='w-auto h-[190px]'
-                                        />
-                                        <div className='flex items-end justify-between'>
-                                            <div>
-                                                <p className='pt-[22px] text-[#2B2A29] text-lg_40/6 font-bold SF_Pro'>{item?.name}</p>
-                                                <p className='pt-[2px] text-[#2B2A29] text-sm_40/5'>Processor {item?.Processor}</p>
-                                                <p className='pt-4 text-xl_36 text-[#2B2A29] font-bold'>₹ {item?.price}</p>
-                                            </div>
-                                            <div className='button-linear-gradient text-white cursor-pointer h-[62px] w-[62px] rounded-full flex justify-center items-center'>
-                                                <PiShoppingCart size={24} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div> */}
-
                             <div className='col-span-4 sm:pt-0 pt-10'>
                                 <Swiper
                                     modules={[Navigation, Pagination, Autoplay]}
@@ -454,7 +430,7 @@ const Home = () => {
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
-                                <div className='flex justify-end sm:hidden'>
+                                <div className='flex justify-center sm:hidden'>
                                     <button className='sm:px-9 px-6 sm:mt-[240px] mt-8 sm:py-[15px] py-3 bg-white text-[#14519E] sm:text-base_40/5 text-sm font-medium rounded-full'>Read More</button>
                                 </div>
                             </div>
@@ -541,7 +517,7 @@ const Home = () => {
 
                 {/* Instagram block  */}
                 <div className='sm:pt-[113px] pt-10'>
-                    <div className='grid gap-y-[80px] overflow-hidden relative'>
+                    <div className='grid sm:gap-y-[80px] gap-y-[220px] overflow-hidden relative'>
                         <div className='flex marquee'>
                             {insta_image.map((item, i) => (
                                 <Image

@@ -1,13 +1,23 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import WebLayout from '../Layout/WebLayout'
 import Image from 'next/image'
 import { HiChevronRight } from "react-icons/hi2";
 import { PiPencilSimpleLineLight, PiStarFill } from 'react-icons/pi';
 import Select from 'react-select';
+import { useRouter } from 'next/router';
 
 const page = () => {
+    const router = useRouter();
+    const { section } = router.query; // Extract the 'section' query parameter
     const [activeSection, setActiveSection] = useState("Profile Information");
+
+    useEffect(() => {
+        if (section) {
+            setActiveSection(section); // Update activeSection based on the query parameter
+        }
+    }, [section]);
+
     const [editableField, setEditableField] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [states, setStates] = useState([]);
