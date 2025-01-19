@@ -9,7 +9,6 @@ const WebLayout = ({ children }) => {
   const [isModalVisible, setModalVisible] = useState(false);
 
   useEffect(() => {
-    // Disable scrolling when modal is visible
     if (isModalVisible) {
       document.body.classList.add("overflow-hidden");
     } else {
@@ -35,10 +34,10 @@ const WebLayout = ({ children }) => {
       </div>
       <Footer />
 
+      {/* timmer signup page */}
       <div className="flex items-center justify-center bg-gray-100">
-        {/* Modal */}
         {isModalVisible && (
-          <div className="fixed inset-0 sm:bottom-0 bottom-[-50px] flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="fixed inset-0 flex sm:items-center items-end justify-center bg-black bg-opacity-50 z-50">
             <div className='sm:grid grid-cols-2'>
               <Image
                 src="/assets/images/contact-timer-image.jpg"
@@ -47,7 +46,7 @@ const WebLayout = ({ children }) => {
                 width={600}
                 className='sm:h-[600px] sm:block hidden w-full object-cover'
               />
-              <div className="bg-white shadow-lg w-full max-w-lg relative">
+              <div className="bg-white shadow-lg w-full max-w-lg relative sm:pb-0 pb-8">
                 <button
                   onClick={() => setModalVisible(false)}
                   className="absolute top-2 right-4 text-white text-3xl font-bold"
@@ -158,6 +157,7 @@ const WebLayout = ({ children }) => {
           </div>
         )}
       </div>
+
     </Fragment>
   )
 }

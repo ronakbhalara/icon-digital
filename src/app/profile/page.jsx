@@ -7,7 +7,7 @@ import { PiPencilSimpleLineLight, PiStarFill } from 'react-icons/pi';
 import Select from 'react-select';
 
 const page = () => {
-    const [activeSection, setActiveSection] = useState("MyOrder");
+    const [activeSection, setActiveSection] = useState("Profile Information");
     const [editableField, setEditableField] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [states, setStates] = useState([]);
@@ -124,6 +124,23 @@ const page = () => {
         { transactionNo: "10911437630", productName: "Asus VivoBook s15", date: "25/11/2024", time: "10:57", price: "₹51,000" },
         { transactionNo: "10911437850", productName: "Asus VivoBook s15", date: "25/11/2024", time: "10:57", price: "₹51,000" },
     ];
+
+    // State to track the current step
+    const [currentStep, setCurrentStep] = useState(1);
+
+    // Dummy steps data
+    const steps = [
+        { id: 1, date: "Apr 5, 2022, 10:07 AM" },
+        { id: 2, date: "Apr 5, 2022, 10:07 AM" },
+        { id: 3, date: "Apr 5, 2022, 10:07 AM" },
+    ];
+
+    // Function to handle the next step
+    const goToNextStep = () => {
+        if (currentStep < steps.length) {
+            setCurrentStep(currentStep + 1);
+        }
+    };
 
     return (
         <WebLayout>
@@ -252,15 +269,155 @@ const page = () => {
                     </div>
                 </div>
                 {/* Details Section */}
-                <div className="col-span-5 border sm:mt-0 mt-5 border-[#e3e1e1] overflow-y-auto p-5">
+                <div className="col-span-5 border sm:mt-0 mt-5 border-[#e3e1e1] overflow-y-auto sm:p-5 p-2.5">
 
                     {activeSection === "MyOrder" && (
-                        <div className='w-full max-w-[600px] pt-3'>
-                            <h3 className='text-base font-medium text-[#2B2A29]'>
-                                MyOrder
-                            </h3>
+                        <div className='space-y-4'>
+                            <div className='w-full sm:p-6 p-3 border border-[#e3e1e1]'>
+                                <div className='flex flex-wrap justify-between'>
+                                    <div className='flex flex-wrap gap-x-5'>
+                                        <div>
+                                            <Image
+                                                src="/assets/images/best-saller.png"
+                                                alt=''
+                                                height={400}
+                                                width={400}
+                                                className='h-[120px] w-auto object-cover'
+
+                                            />
+                                            <h3 className='sm:text-2xl text-xl SF_Pro font-semibold sm:pt-2.5 pt-1.5'>
+                                                Order In Progress
+                                            </h3>
+                                            <p className='text-sm sm:pt-2 pt-0 text-[#909090]'>Order Arrived at Apr 5, 2022, 10:07 AM </p>
+                                        </div>
+                                        <div className='sm:pt-0 pt-3'>
+                                            <h3 className='text-lg SF_Pro font-semibold'>
+                                                Asus VivoBook s15
+                                            </h3>
+                                            <p className='text-sm pt-1 text-[#4D4D4D]'>Processor i5</p>
+                                        </div>
+                                    </div>
+                                    <div className="sm:space-y-8 gap-x-4 mt-5 sm:block flex items-center">
+                                        <button
+                                            className={`rounded-2xl text-sm py-2 px-3 ${currentStep === steps.length ? "bg-[#14519E] text-white" : "border border-[#14519E] text-[#14519E]"
+                                                }`}
+                                        >
+                                            {currentStep === steps.length ? "Delivered" : "In Progress"}
+                                        </button>
+                                        <p className="font-bold text-xl text-center">₹ 51,000</p>
+                                    </div>
+                                </div>
+                                <div className="flex  flex-col mt-5">
+                                    <div className="flex  sm:gap-8 gap-1">
+                                        {steps.map((step) => (
+                                            <div key={step.id} className="flex flex-wrap flex-col items-center">
+                                                <div
+                                                    className={`w-full h-2 rounded-full mb-2 ${currentStep >= step.id ? "bg-blue-600" : "bg-gray-300"}`}
+                                                ></div>
+                                                <div className="flex flex-wrap gap-2 items-center text-gray-600">
+                                                    <div
+                                                        className={`sm:w-6 w-4 sm:text-base text-xs  sm:h-6 h-4 flex  justify-center items-center rounded-full border ${currentStep > step.id
+                                                            ? "bg-blue-600 text-white border-blue-600"
+                                                            : currentStep === step.id
+                                                                ? "bg-blue-600 text-white border-blue-600"
+                                                                : "bg-transparent text-white border-gray-300"
+                                                            }`}
+                                                    >
+                                                        {currentStep || step.id ? "✓" : ""}
+                                                    </div>
+                                                    <span
+                                                        className={`sm:text-sm text-xs ${currentStep >= step.id ? "text-gray-600" : "text-gray-400"}`}
+                                                    >
+                                                        {step.date}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                {/* Button to advance step */}
+                                {/* <button
+                                    onClick={goToNextStep}
+                                    className="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                                    disabled={currentStep === steps.length}
+                                >
+                                    Next Step
+                                </button> */}
+                            </div>
+                            <div className='w-full sm:p-6 p-3 border border-[#e3e1e1]'>
+                                <div className='flex flex-wrap justify-between'>
+                                    <div className='flex flex-wrap gap-x-5'>
+                                        <div>
+                                            <Image
+                                                src="/assets/images/best-saller.png"
+                                                alt=''
+                                                height={400}
+                                                width={400}
+                                                className='h-[120px] w-auto object-cover'
+
+                                            />
+                                            <h3 className='sm:text-2xl text-xl SF_Pro font-semibold sm:pt-2.5 pt-1.5'>
+                                                Order In Progress
+                                            </h3>
+                                            <p className='text-sm sm:pt-2 pt-0 text-[#909090]'>Order Arrived at Apr 5, 2022, 10:07 AM </p>
+                                        </div>
+                                        <div className='sm:pt-0 pt-3'>
+                                            <h3 className='text-lg SF_Pro font-semibold'>
+                                                Asus VivoBook s15
+                                            </h3>
+                                            <p className='text-sm pt-1 text-[#4D4D4D]'>Processor i5</p>
+                                        </div>
+                                    </div>
+                                    <div className="sm:space-y-8 gap-x-4 mt-5 sm:block flex items-center">
+                                        <button
+                                            className={`rounded-2xl text-sm py-2 px-3 ${currentStep === steps.length ? "bg-[#14519E] text-white" : "border border-[#14519E] text-[#14519E]"
+                                                }`}
+                                        >
+                                            {currentStep === steps.length ? "Delivered" : "In Progress"}
+                                        </button>
+                                        <p className="font-bold text-xl text-center">₹ 51,000</p>
+                                    </div>
+                                </div>
+                                <div className="flex  flex-col mt-5">
+                                    <div className="flex  sm:gap-8 gap-1">
+                                        {steps.map((step) => (
+                                            <div key={step.id} className="flex flex-wrap flex-col items-center">
+                                                <div
+                                                    className={`w-full h-2 rounded-full mb-2 ${currentStep >= step.id ? "bg-blue-600" : "bg-gray-300"}`}
+                                                ></div>
+                                                <div className="flex flex-wrap gap-2 items-center text-gray-600">
+                                                    <div
+                                                        className={`sm:w-6 w-4 sm:text-base text-xs  sm:h-6 h-4 flex  justify-center items-center rounded-full border ${currentStep > step.id
+                                                            ? "bg-blue-600 text-white border-blue-600"
+                                                            : currentStep === step.id
+                                                                ? "bg-blue-600 text-white border-blue-600"
+                                                                : "bg-transparent text-white border-gray-300"
+                                                            }`}
+                                                    >
+                                                        {currentStep || step.id ? "✓" : ""}
+                                                    </div>
+                                                    <span
+                                                        className={`sm:text-sm text-xs ${currentStep >= step.id ? "text-gray-600" : "text-gray-400"}`}
+                                                    >
+                                                        {step.date}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                {/* Button to advance step */}
+                                {/* <button
+                                    onClick={goToNextStep}
+                                    className="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                                    disabled={currentStep === steps.length}
+                                >
+                                    Next Step
+                                </button> */}
+                            </div>
                         </div>
                     )}
+
                     {activeSection === "Profile Information" && (
                         <div className='w-full max-w-[600px] pt-3'>
                             <div className='flex justify-between'>
