@@ -5,18 +5,15 @@ import Image from 'next/image'
 import { HiChevronRight } from "react-icons/hi2";
 import { PiPencilSimpleLineLight, PiStarFill } from 'react-icons/pi';
 import Select from 'react-select';
-import { useRouter } from 'next/router';
 
 const page = () => {
-    const router = useRouter();
-    const { section } = router.query;
     const [activeSection, setActiveSection] = useState("Profile Information");
 
-    useEffect(() => {
-        if (section) {
-            setActiveSection(section);
-        }
-    }, [section]);
+    // useEffect(() => {
+    //     if (section) {
+    //         setActiveSection(section);
+    //     }
+    // }, [section]);
 
     const [editableField, setEditableField] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState(null);
