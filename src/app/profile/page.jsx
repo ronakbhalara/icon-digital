@@ -6,7 +6,7 @@ import { HiChevronRight } from "react-icons/hi2";
 import { PiPencilSimpleLineLight, PiStarFill } from 'react-icons/pi';
 import Select from 'react-select';
 
-const page = () => {
+const Profile = () => {
     const [activeSection, setActiveSection] = useState("Profile Information");
 
     // useEffect(() => {
@@ -799,4 +799,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Profile
