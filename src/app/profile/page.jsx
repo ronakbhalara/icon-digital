@@ -9,12 +9,12 @@ import { useRouter } from 'next/router';
 
 const page = () => {
     const router = useRouter();
-    const { section } = router.query; // Extract the 'section' query parameter
+    const { section } = router.query;
     const [activeSection, setActiveSection] = useState("Profile Information");
 
     useEffect(() => {
         if (section) {
-            setActiveSection(section); // Update activeSection based on the query parameter
+            setActiveSection(section);
         }
     }, [section]);
 
