@@ -37,7 +37,7 @@ const Footer = () => {
                   className='cursor-pointer hover:text-[#2B2A29] transition-colors'>My Account
                 </Link>
                 <Link
-                  href="/profile?section=MyOrder"
+                  href="#"
                   className="cursor-pointer block hover:text-[#2B2A29] transition-colors"
                 >
                   Track My Order
