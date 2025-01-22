@@ -6,24 +6,24 @@ import ChatBox from '@/app/Component/ChatBox'
 import Image from 'next/image'
 
 const WebLayout = ({ children }) => {
-  const [isModalVisible, setModalVisible] = useState(false);
+  // const [isModalVisible, setModalVisible] = useState(false);
 
-  useEffect(() => {
-    if (isModalVisible) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
+  // useEffect(() => {
+  //   if (isModalVisible) {
+  //     document.body.classList.add("overflow-hidden");
+  //   } else {
+  //     document.body.classList.remove("overflow-hidden");
+  //   }
 
-    return () => document.body.classList.remove("overflow-hidden");
-  }, [isModalVisible]);
+  //   return () => document.body.classList.remove("overflow-hidden");
+  // }, [isModalVisible]);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setModalVisible(true);
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setModalVisible(true);
+  //   }, 5000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <Fragment>
@@ -35,7 +35,7 @@ const WebLayout = ({ children }) => {
       <Footer />
 
       {/* timmer signup page */}
-      <div className="flex items-center justify-center bg-gray-100">
+      {/* <div className="flex items-center justify-center bg-gray-100">
         {isModalVisible && (
           <div className="fixed inset-0 flex sm:items-center items-end justify-center bg-black bg-opacity-50 z-50">
             <div className='sm:grid grid-cols-2'>
@@ -156,7 +156,7 @@ const WebLayout = ({ children }) => {
             </div>
           </div>
         )}
-      </div>
+      </div> */}
 
     </Fragment>
   )

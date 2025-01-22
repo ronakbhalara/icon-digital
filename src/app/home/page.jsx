@@ -148,6 +148,16 @@ const Home = () => {
             image: "/assets/images/customer-image.png",
             name: "Tushar Patel"
         },
+        {
+            content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            image: "/assets/images/customer-image.png",
+            name: "Tushar Patel"
+        },
+        {
+            content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            image: "/assets/images/customer-image.png",
+            name: "Tushar Patel"
+        },
     ]
 
     const insta_image = [
@@ -374,7 +384,7 @@ const Home = () => {
                             alt='Best Seller background'
                             height={650}
                             width={1000}
-                            className='w-auto bg-cover h-[641px] absolute sm:top-0 bottom-0'
+                            className='w-auto bg-cover h-[641px] absolute sm:top-0 bottom-0 left-0'
                         />
                         <div className='w-full BEST_SALLER z-30 max-w-[1200px] relative mx-auto sm:py-[130px] py-10 sm:grid grid-cols-5 gap-x-[83px]'>
                             <div className='sm:block flex sm:justify-between justify-center sm:w-auto w-full col-span-1 items-center'>
@@ -488,29 +498,44 @@ const Home = () => {
                 <div className='sm:pt-[130px] pt-16'>
                     <div className='w-full max-w-[1200px] sm:px-0 px-4 mx-auto'>
                         <h2 className='text-[#2B2A29] font-bold sm:text-[48px] text-3xl text-center SF_Pro'>What Customer Say</h2>
-                        <div className='sm:pt-10 pt-12 grid sm:grid-cols-4 grid-cols-1 gap-5'>
-                            {Customer.map((item, i) => (
-                                <div className='border border-[#D7D7D7] rounded-[20px] sm:py-[30px] py-4 px-5' key={i}>
-                                    <div className='text-[#FDCE15] flex gap-x-[5px]'>
-                                        <PiStarFill size={24} />
-                                        <PiStarFill size={24} />
-                                        <PiStarFill size={24} />
-                                        <PiStarFill size={24} />
-                                        <PiStarFill size={24} />
-                                    </div>
-                                    <p className='sm:pt-[50px] pt-6 text-base_40/6 text-[#4D4D4D] '>{item.content}</p>
-                                    <div className='flex items-center gap-x-[15px] sm:pt-12 pt-6'>
-                                        <Image
-                                            src={item.image}
-                                            alt='Customer image'
-                                            height={60}
-                                            width={60}
-                                            className='w-auto h-[50px] cursor-pointer object-cover'
-                                        />
-                                        <p className='font-bold text-lg_40/6 text-[#2B2A29] cursor-pointer SF_Pro'>{item.name}</p>
-                                    </div>
-                                </div>
-                            ))}
+                        <div className='sm:pt-10 blue-slider-button pt-12 gap-5'>
+                            <Swiper
+                                modules={[Navigation, Pagination, Autoplay]}
+                                spaceBetween={20}
+                                slidesPerView={1}
+                                pagination={{ clickable: true }}
+                                autoplay={{ delay: 3000 }}
+                                breakpoints={{
+                                    640: { slidesPerView: 1 },
+                                    768: { slidesPerView: 2 },
+                                    1024: { slidesPerView: 4 },
+                                }}
+                            >
+                                {Customer.map((item, i) => (
+                                    <SwiperSlide key={i}>
+                                        <div className='border border-[#D7D7D7] rounded-[20px] sm:pt-[30px] py-4 px-5' key={i}>
+                                            <div className='text-[#FDCE15] flex gap-x-[5px]'>
+                                                <PiStarFill size={24} />
+                                                <PiStarFill size={24} />
+                                                <PiStarFill size={24} />
+                                                <PiStarFill size={24} />
+                                                <PiStarFill size={24} />
+                                            </div>
+                                            <p className='sm:pt-[50px] pt-6 text-base_40/6 text-[#4D4D4D] '>{item.content}</p>
+                                            <div className='flex items-center gap-x-[15px] sm:pt-12 pt-6'>
+                                                <Image
+                                                    src={item.image}
+                                                    alt='Customer image'
+                                                    height={60}
+                                                    width={60}
+                                                    className='w-auto h-[50px] cursor-pointer object-cover'
+                                                />
+                                                <p className='font-bold text-lg_40/6 text-[#2B2A29] cursor-pointer SF_Pro'>{item.name}</p>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
                         </div>
                     </div>
                 </div>
@@ -543,8 +568,8 @@ const Home = () => {
                             ))}
                         </div>
 
-                        <div className='absolute sm:w-auto w-full top-1/2 sm:left-1/2 transform sm:-translate-x-1/2 -translate-y-1/2'>
-                            <div className='sm:h-[400px] sm:w-[688px] h-[250px] w-full relative'>
+                        <div className='absolute w-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                            <div className='sm:h-[400px] sm:w-[688px] h-[250px] w-auto relative'>
                                 <div className='sm:h-[50%] h-[70%] pt-5 pl-7 pr-5 bg-white'>
                                     <div className='flex justify-end items-center gap-x-[25px]'>
                                         <Link

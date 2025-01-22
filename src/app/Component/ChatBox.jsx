@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function ChatBox() {
@@ -119,10 +120,18 @@ export default function ChatBox() {
             {/* Toggle Button */}
             <button
                 onClick={handleToggleChat}
-                className="w-14 h-14 bg-blue-500 sm:z-50 z-40 text-2xl fixed bottom-4 right-4 text-white rounded-full shadow-lg hover:bg-blue-600                  
+                className="w-14 h-14 bg-white sm:z-50 z-40 text-2xl fixed bottom-4 right-4 text-[#0A79C1] rounded-full shadow-[0px_2px_40px_0px_#4d4d4d85]                  
                 focus:outline-none flex items-center justify-center"
             >
-                {isChatOpen ? "✖" : "💬"}
+                {isChatOpen ? "✖" :
+                    <Image
+                        src="/assets/images/message.svg"
+                        alt="message"
+                        className="max-h-8"
+                        height={40}
+                        width={40}
+                    />
+                }
             </button>
         </div>
     );

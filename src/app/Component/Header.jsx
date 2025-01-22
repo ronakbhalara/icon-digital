@@ -68,7 +68,7 @@ const Header = () => {
             <div className="flex items-center gap-4 text-gray-800">
               <div className="border hidden border-gray-300 md:flex items-center gap-x-2 pr-2 pl-2  w-56 py-2.5 rounded-lg">
                 <CiSearch size={24} />
-                <input type="search" className="outline-none" />
+                <input type="search" placeholder="Search" className="outline-none" />
               </div>
               <div
                 className={`fixed top-[122px] right-0 z-50 w-full bg-white p-5 transition-transform duration-300 ${isOpen ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
@@ -79,7 +79,7 @@ const Header = () => {
                   <input
                     type="search"
                     className="outline-none w-full"
-                    placeholder="Search Your Category"
+                    placeholder="Search"
                   />
                 </div>
               </div>
