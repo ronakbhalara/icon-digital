@@ -20,15 +20,15 @@ const ContactUs = () => {
 
     const validate = () => {
         let newErrors = {};
-        if (!formData.name.trim()) newErrors.name = "Name is required";
+        if (!formData.firstname) newErrors.firstname = "First Name is required";
+        if (!formData.lastname) newErrors.lastname = "Last Name is required";
+        if (!formData.number) newErrors.number = "Phone number is required";
         if (!formData.email.trim()) {
             newErrors.email = "Email is required";
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
             newErrors.email = "Invalid email address";
         }
-        if (!formData.subject.trim()) newErrors.subject = "Subject is required";
-        if (!formData.question.trim()) newErrors.question = "Question is required";
-
+        if (!formData.question.trim()) newErrors.question = "Message is required";
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -54,34 +54,56 @@ const ContactUs = () => {
                             className='sm:h-full h-[400px] rounded-lg sm:w-auto w-full object-cover'
                         />
                         <form onSubmit={handleSubmit} className="sm:space-y-6 space-y-5 sm:pt-0 pt-5">
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700">
-                                    Name<span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    className={`mt-1 block w-full py-2 rounded-md border ${errors.name ? "border-red-500" : "border-gray-300"
-                                        } shadow-sm focus:border-indigo-500 focus:ring-indigo-500`}
-                                />
-                                {errors.name && (
-                                    <p className="text-sm text-red-500 mt-1">{errors.name}</p>
-                                )}
+                            <div className='grid sm:grid-cols-2 grid-cols-1 gap-5 items-center'>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700">
+                                        First Name<span className="text-red-500">*</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={formData.firstname}
+                                        onChange={handleChange}
+                                        className={`mt-1 block w-full py-2 rounded-md border ${errors.firstname ? "border-red-500" : "border-gray-300"
+                                            } shadow-sm focus:border-indigo-500 focus:ring-indigo-500`}
+                                    />
+                                    {errors.firstname && (
+                                        <p className="text-sm text-red-500 mt-1">{errors.firstname}</p>
+                                    )}
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700">
+                                        Last Name<span className="text-red-500">*</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={formData.lastname}
+                                        onChange={handleChange}
+                                        className={`mt-1 block w-full py-2 rounded-md border ${errors.lastname ? "border-red-500" : "border-gray-300"
+                                            } shadow-sm focus:border-indigo-500 focus:ring-indigo-500`}
+                                    />
+                                    {errors.lastname && (
+                                        <p className="text-sm text-red-500 mt-1">{errors.lastname}</p>
+                                    )}
+                                </div>
                             </div>
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">
-                                    Phone Number
+                                    Phone Number<span className="text-red-500">*</span>
                                 </label>
                                 <input
                                     type="text"
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    className="mt-1 block w-full py-2 rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                                    className={`mt-1 block w-full rounded-md py-2 border ${errors.email ? "border-red-500" : "border-gray-300"
+                                        } shadow-sm focus:border-indigo-500 focus:ring-indigo-500`}
                                 />
+                                {errors.number && (
+                                    <p className="text-sm text-red-500 mt-1">{errors.number}</p>
+                                )}
                             </div>
 
                             <div>
@@ -103,37 +125,7 @@ const ContactUs = () => {
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">
-                                    Company
-                                </label>
-                                <input
-                                    type="text"
-                                    name="company"
-                                    value={formData.company}
-                                    onChange={handleChange}
-                                    className="mt-1 block w-full rounded-md py-2 border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                                />
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700">
-                                    Subject<span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    name="subject"
-                                    value={formData.subject}
-                                    onChange={handleChange}
-                                    className={`mt-1 block w-full rounded-md py-2 border ${errors.subject ? "border-red-500" : "border-gray-300"
-                                        } shadow-sm focus:border-indigo-500 focus:ring-indigo-500`}
-                                />
-                                {errors.subject && (
-                                    <p className="text-sm text-red-500 mt-1">{errors.subject}</p>
-                                )}
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700">
-                                    Question<span className="text-red-500">*</span>
+                                    Message<span className="text-red-500">*</span>
                                 </label>
                                 <textarea
                                     name="question"

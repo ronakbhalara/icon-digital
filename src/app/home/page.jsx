@@ -276,7 +276,7 @@ const Home = () => {
                                         alt={item}
                                         height={200}
                                         width={200}
-                                        className='object-cover w-auto sm:h-[188px] h-[100px]'
+                                        className="object-cover cursor-pointer w-auto sm:h-[188px] h-[100px] transform transition-transform duration-300 hover:scale-110"
                                         key={i}
                                     />
                                 ))}
@@ -300,7 +300,7 @@ const Home = () => {
                                             alt="brand-image"
                                             height={200}
                                             width={200}
-                                            className='object-cover cursor-pointer w-auto sm:h-[188px] h-[100px]'
+                                            className='object-cover transform transition-transform duration-300 hover:scale-110 cursor-pointer w-auto sm:h-[188px] h-[100px]'
                                             key={i}
                                         />
                                     ))}
@@ -312,7 +312,7 @@ const Home = () => {
                                             alt="brand-image"
                                             height={200}
                                             width={200}
-                                            className='object-cover cursor-pointer  w-auto sm:h-[188px] h-[100px]'
+                                            className='object-cover transform transition-transform duration-300 hover:scale-110 cursor-pointer  w-auto sm:h-[188px] h-[100px]'
                                             key={i}
                                         />
                                     ))}
@@ -329,7 +329,7 @@ const Home = () => {
                         alt=""
                         height={800}
                         width={500}
-                        className='absolute top-12 left-0 h-[750px] w-auto -z-30'
+                        className='absolute -z-10 top-12 left-0 sm:h-[750px] h-auto w-auto'
                     />
                     <div className='w-full max-w-[1200px] sm:px-0 px-4 mx-auto sm:pt-[74px] pt-14'>
                         <h2 className='text-[#2B2A29] font-bold  sm:text-[48px] text-3xl  text-center SF_Pro'>Shop By Price</h2>
@@ -351,7 +351,7 @@ const Home = () => {
                             <h2 className='text-[#2B2A29] font-bold  sm:text-[48px] text-3xl text-center SF_Pro'>Shop By Use</h2>
                             <div className='sm:pt-[78px] pt-14 sm:grid sm:grid-cols-5 flex justify-center flex-wrap sm:gap-[80px] gap-10'>
                                 {Use.map((item, i) => (
-                                    <div className='relative' key={i}>
+                                    <div className='relative z-10' key={i}>
                                         <Image
                                             src="/assets/images/Polygon.png"
                                             alt=""
@@ -364,7 +364,7 @@ const Home = () => {
                                             alt=""
                                             height={150}
                                             width={150}
-                                            className='object-cover w-auto sm:h-[160px] h-[130px] cursor-pointer absolute -top-1 left-3  '
+                                            className='object-cover transform transition-transform duration-300 hover:scale-110 w-auto sm:h-[160px] h-[130px] cursor-pointer absolute -top-1 left-3  '
                                         />
                                         <p className='text-center pt-6'>
                                             {item.name}
@@ -384,7 +384,7 @@ const Home = () => {
                             alt='Best Seller background'
                             height={650}
                             width={1000}
-                            className='w-auto bg-cover h-[641px] absolute sm:top-0 bottom-0 left-0'
+                            className='w-auto bg-cover sm:h-[641px] h-auto absolute sm:top-0 bottom-0 left-0'
                         />
                         <div className='w-full BEST_SALLER z-30 max-w-[1200px] relative mx-auto sm:py-[130px] py-10 sm:grid grid-cols-5 gap-x-[83px]'>
                             <div className='sm:block flex sm:justify-between justify-center sm:w-auto w-full col-span-1 items-center'>
@@ -392,7 +392,7 @@ const Home = () => {
                                     <p className='text-white font-bold border-b border-white sm:text-4xl text-2xl inline-block SF_Pro'>Best Seller</p>
                                     <p className='sm:pt-5 pt-2.5 sm:text-left text-center text-white text-xl_40/7 SF_Pro'>New Arrivals</p>
                                 </div>
-                                <button className='px-9 py-[15px] sm:block hidden bg-white text-[#14519E] sm:text-base_40/5 text-sm font-medium rounded-full sm:mt-[240px]'>Read More</button>
+                                <button className='px-9 py-[15px] sm:block hidden bg-white text-[#14519E] sm:text-base_40/5 text-sm font-medium rounded-full sm:mt-[220px]'>Read More</button>
                             </div>
                             <div className='col-span-4 sm:pt-0 pt-10'>
                                 <Swiper
@@ -410,14 +410,14 @@ const Home = () => {
                                 >
                                     {Similar_Products.map((item, i) => (
                                         <SwiperSlide key={i}>
-                                            <div className='h-[382px] w-auto bg-white rounded-[20px] pr-3.5 pt-[57px] pl-[23px] pb-[15px]'>
+                                            <div className='h-auto relative cursor-pointer w-auto group bg-white rounded-[20px] pr-3.5 pt-[57px] pl-[23px] pb-7'>
                                                 <div className='flex justify-center'>
                                                     <Image
                                                         src={item.image}
                                                         alt='Similar Product'
                                                         height={200}
                                                         width={300}
-                                                        className='w-auto h-[170px]'
+                                                        className='w-auto h-[170px] group-hover:scale-110 transform transition-transform duration-300'
                                                     />
                                                 </div>
                                                 <div className='flex items-end justify-between'>
@@ -432,7 +432,7 @@ const Home = () => {
                                                             ₹ {item.price}
                                                         </p>
                                                     </div>
-                                                    <div className='button-linear-gradient text-white cursor-pointer h-[50px] w-[52px] rounded-full flex justify-center items-center'>
+                                                    <div className='button-linear-gradient absolute bottom-3 right-3 text-white h-[50px] w-[52px] rounded-full flex justify-center items-center'>
                                                         <PiShoppingCart size={24} />
                                                     </div>
                                                 </div>
@@ -513,7 +513,7 @@ const Home = () => {
                             >
                                 {Customer.map((item, i) => (
                                     <SwiperSlide key={i}>
-                                        <div className='border border-[#D7D7D7] rounded-[20px] sm:pt-[30px] py-4 px-5' key={i}>
+                                        <div className='border border-[#D7D7D7] rounded-[20px] sm:pt-5 py-4 px-5' key={i}>
                                             <div className='text-[#FDCE15] flex gap-x-[5px]'>
                                                 <PiStarFill size={24} />
                                                 <PiStarFill size={24} />
@@ -521,8 +521,8 @@ const Home = () => {
                                                 <PiStarFill size={24} />
                                                 <PiStarFill size={24} />
                                             </div>
-                                            <p className='sm:pt-[50px] pt-6 text-base_40/6 text-[#4D4D4D] '>{item.content}</p>
-                                            <div className='flex items-center gap-x-[15px] sm:pt-12 pt-6'>
+                                            <p className='sm:pt-6 pt-6 text-base_40/6 text-[#4D4D4D] '>{item.content}</p>
+                                            <div className='flex items-center gap-x-[15px] sm:pt-8 pt-6'>
                                                 <Image
                                                     src={item.image}
                                                     alt='Customer image'

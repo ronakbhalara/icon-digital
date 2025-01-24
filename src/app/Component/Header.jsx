@@ -5,6 +5,7 @@ import Link from "next/link";
 import { PiHeart, PiPhone, PiShoppingCart, PiUserCircle } from "react-icons/pi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
+import ChatBox from "./ChatBox";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,13 +15,13 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   const header = [
-    { title: "Laptop", url: "/laptop" },
-    { title: "Desktop", url: "#" },
-    { title: "All In One", url: "#" },
-    { title: "Monitors", url: "#" },
-    { title: "Printer", url: "#" },
-    { title: "Pre-Build PC", url: "#" },
-    { title: "Accessories & Software", url: "#" },
+    { title: "Laptop", url: "/product" },
+    { title: "Desktop", url: "/product" },
+    { title: "All In One", url: "/product" },
+    { title: "Monitors", url: "/product" },
+    { title: "Printer", url: "/product" },
+    { title: "Pre-Build PC", url: "/product" },
+    { title: "Accessories & Software", url: "/product" },
     { title: "Customize Product", url: "/customize-product" },
     { title: "Support", url: "/support" },
   ];
@@ -29,20 +30,12 @@ const Header = () => {
     <>
       <div className='bg-[#14519E] hidden py-2.5 text-center text-white sm:text-sm text-[10px] sm:flex items-center justify-center sm:gap-x-2.5'>
         <span>  Welcome Offer</span> <p>Up to ₹ 45,000 Cashback, Bonus on Laptop Exchange.</p>
-        <div className="flex items-center justify-end pt-2 sm:hidden gap-2">
-          <PiPhone size={15} />
-          <span className="text-[10px] pr-3">+91 85954 23549</span>
-        </div>
       </div>
 
       <div className='bg-[#14519E] overflow-hidden sm:hidden block py-2.5 text-center text-white sm:text-sm text-[10px]'>
         <p className="marquee">Welcome Offer Up to ₹ 45,000 Cashback, Bonus on Laptop Exchange.
           Welcome Offer Up to ₹ 45,000 Cashback, Bonus on Laptop Exchange.
         </p>
-        <div className="flex items-center justify-end pt-2 sm:hidden gap-2">
-          <PiPhone size={15} />
-          <span className="text-[10px] pr-3">+91 85954 23549</span>
-        </div>
       </div>
 
       <div className="sm:py-6 py-3  border-b border-gray-300 bg-white sticky top-0 left-0 z-40">
@@ -67,7 +60,14 @@ const Header = () => {
 
             <div className="flex items-center gap-4 text-gray-800">
               <div className="border hidden border-gray-300 md:flex items-center gap-x-2 pr-2 pl-2  w-56 py-2.5 rounded-lg">
-                <CiSearch size={24} />
+                {/* <CiSearch size={24} /> */}
+                <Image
+                  src="/assets/images/search-normal.svg"
+                  alt="search"
+                  height={20}
+                  width={20}
+                  className=""
+                />
                 <input type="search" placeholder="Search" className="outline-none" />
               </div>
               <div
@@ -91,10 +91,18 @@ const Header = () => {
                   onClick={toggleModal}
                 ></div>
               )}
-              <CiSearch size={24} className="cursor-pointer md:hidden" onClick={toggleModal} />
+              {/* <CiSearch size={24} className="cursor-pointer md:hidden" onClick={toggleModal} /> */}
+              <Image
+                src="/assets/images/search-normal.svg"
+                alt="search"
+                height={20}
+                width={20}
+                className="sm:hidden block"
+                onClick={toggleModal}
+              />
               <PiHeart size={24} className="cursor-pointer" />
               <PiShoppingCart size={24} className="cursor-pointer" />
-              <Link href="/profile">
+              <Link href="/profile" className="hidden sm:block">
                 <PiUserCircle size={24} className="cursor-pointer" />
               </Link>
               <button
@@ -129,6 +137,12 @@ const Header = () => {
               <AiOutlineClose size={24} />
             </button>
           </div>
+
+          <Link href="/profile" className="flex p-4 pb-0 gap-x-3 items-center">
+            <PiUserCircle size={24} className="cursor-pointer" />
+            <p className="font-medium SF_Pro text-base">My Profile</p>
+          </Link>
+
           <div className="p-4 flex flex-col gap-4 text-gray-800">
             {header.map((item, i) => (
               <Link
@@ -141,6 +155,12 @@ const Header = () => {
               </Link>
             ))}
           </div>
+
+          <div className="flex absolute bottom-0 p-4 items-center pt-2 sm:hidden gap-2">
+            <PiPhone size={20} />
+            <span className="font-medium SF_Pro text-base">+91 85954 23549</span>
+          </div>
+
         </div>
 
         {isMobileMenuOpen && (
@@ -150,6 +170,8 @@ const Header = () => {
           />
         )}
       </div>
+
+      <ChatBox isMobileMenuOpen={isMobileMenuOpen} />
     </>
   );
 };

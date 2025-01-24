@@ -28,7 +28,6 @@ const WebLayout = ({ children }) => {
   return (
     <Fragment>
       <Header />
-      <ChatBox />
       <div>
         {children}
       </div>

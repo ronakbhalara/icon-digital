@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function ChatBox() {
+export default function ChatBox({ isMobileMenuOpen }) {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
     const [isChatOpen, setIsChatOpen] = useState(false);
@@ -44,7 +44,7 @@ export default function ChatBox() {
     };
 
     return (
-        <div className="fixed sm:bottom-4 sm:right-4 top-0 right-0 z-50">
+        <div className="fixed sm:bottom-4 sm:right-4 top-0 right-0 z-40">
             {/* Background Overlay */}
             {isChatOpen && (
                 <div
@@ -56,7 +56,7 @@ export default function ChatBox() {
             {/* Chat Box */}
             {isChatOpen && (
                 <div
-                    className={`flex flex-col sm:w-96 w-full sm:h-[30rem] h-full fixed sm:bottom-[78px] bottom-0 right-0 sm:right-5 z-50 p-4 bg-gray-100 rounded-lg shadow-lg transform transition-transform duration-500 ${isAnimating ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+                    className={`flex flex-col sm:w-96 w-full sm:h-[30rem] h-full fixed sm:bottom-[78px] bottom-0 right-0 sm:right-5 z-40 p-4 bg-gray-100 rounded-lg shadow-lg transform transition-transform duration-500 ${isAnimating ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
                         }`}
                 >
                     {/* Chat Header */}
@@ -120,10 +120,13 @@ export default function ChatBox() {
             {/* Toggle Button */}
             <button
                 onClick={handleToggleChat}
-                className="w-14 h-14 bg-white sm:z-50 z-40 text-2xl fixed bottom-4 right-4 text-[#0A79C1] rounded-full shadow-[0px_2px_40px_0px_#4d4d4d85]                  
-                focus:outline-none flex items-center justify-center"
+                className={`w-14 h-14 bg-white sm:z-50 z-30 text-2xl fixed ${isMobileMenuOpen ? "hidden" : "bottom-4"
+                    } right-4 text-[#0A79C1] rounded-full shadow-[0px_2px_40px_0px_#4d4d4d85]
+        focus:outline-none flex items-center justify-center`}
             >
-                {isChatOpen ? "✖" :
+                {isChatOpen ? (
+                    "✖"
+                ) : (
                     <Image
                         src="/assets/images/message.svg"
                         alt="message"
@@ -131,7 +134,7 @@ export default function ChatBox() {
                         height={40}
                         width={40}
                     />
-                }
+                )}
             </button>
         </div>
     );

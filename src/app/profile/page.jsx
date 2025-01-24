@@ -167,28 +167,6 @@ const Profile = () => {
                         </div>
                     </div>
                     <div className='border mt-4 border-[#e3e1e1]'>
-                        <div className='px-5 border-b border-[#e3e1e1] py-2.5 gap-x-5 justify-between flex items-center'>
-                            <div className='flex items-center gap-x-4 w-full'>
-                                <Image
-                                    src="/assets/images/shopping-cart-check.svg"
-                                    alt="user image"
-                                    className="h-5 w-auto"
-                                    height={50}
-                                    width={50}
-                                />
-                                {/* <p className='text-[#5C5C5C] text-base font-medium'>My Order</p> */}
-                                <p
-                                    className={`py-2.5 pl-9 cursor-pointer text-base w-full font-medium ${activeSection === "MyOrder"
-                                        ? "text-[#14519E] bg-[#00A0E31A]"
-                                        : "text-[#9A9A9A]"
-                                        }`}
-                                    onClick={() => setActiveSection("MyOrder")}
-                                >
-                                    My Order
-                                </p>
-                            </div>
-                            <HiChevronRight className='text-[#9A9A9A]' size={20} />
-                        </div>
                         <div className='px-5 py-2.5 h-48 border-b border-[#e3e1e1]'>
                             <div className='flex items-center gap-x-4 py-2.5 cursor-pointer'
                             >
@@ -219,6 +197,28 @@ const Profile = () => {
                             >
                                 Manage Address
                             </p>
+                        </div>
+                        <div className='px-5 border-b border-[#e3e1e1] py-2.5 gap-x-5 justify-between flex items-center'>
+                            <div className='flex items-center gap-x-4 w-full'>
+                                <Image
+                                    src="/assets/images/shopping-cart-check.svg"
+                                    alt="user image"
+                                    className="h-5 w-auto"
+                                    height={50}
+                                    width={50}
+                                />
+                                {/* <p className='text-[#5C5C5C] text-base font-medium'>My Order</p> */}
+                                <p
+                                    className={`py-2.5 pl-9 cursor-pointer text-base w-full font-medium ${activeSection === "MyOrder"
+                                        ? "text-[#14519E] bg-[#00A0E31A]"
+                                        : "text-[#9A9A9A]"
+                                        }`}
+                                    onClick={() => setActiveSection("MyOrder")}
+                                >
+                                    My Order
+                                </p>
+                            </div>
+                            <HiChevronRight className='text-[#9A9A9A]' size={20} />
                         </div>
                         <div className='px-5 py-2.5 border-b border-[#e3e1e1]'>
                             <div className='flex items-center gap-x-4 py-2.5 cursor-pointer'>

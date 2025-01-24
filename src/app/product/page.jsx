@@ -31,7 +31,7 @@ const FilterSection = ({ title, options }) => {
     );
 };
 
-const Laptop = () => {
+const Product = () => {
     const filterData = [
         {
             title: "Laptop Series",
@@ -98,23 +98,23 @@ const Laptop = () => {
     return (
         <WebLayout>
             <h1 className='pt-5 text-4xl font-black text-center pb-4 border-b border-[#CECECE] SF_Pro'>Laptops</h1>
-            <div className='w-full max-w-[1200px] mx-auto pt-10 sm:px-0 px-4'>
+            <div className='w-full max-w-[1300px] mx-auto pt-10 sm:px-0 px-4'>
                 <div className='grid sm:grid-cols-7 grid-cols-1 sm:gap-x-6 gap-y-4'>
                     <div className="bg-white rounded-lg shadow-sm col-span-2">
                         {filterData.map((filter, index) => (
                             <FilterSection key={index} title={filter.title} options={filter.options} />
                         ))}
                     </div>
-                    <div className='col-span-5 grid sm:grid-cols-2 gap-7'>
+                    <div className='col-span-5 grid sm:grid-cols-3 gap-7'>
                         {Best_seller.map((item, i) => {
                             if (item.type === "Advertise") {
                                 // Render Advertise Section
                                 return (
                                     <div
                                         key={i}
-                                        className="w-auto sm:h-[382px] h-60 bg-gray-100 sm:p-8 p-4 rounded-[20px] relative"
+                                        className="w-auto sm:h-[350px] h-60 bg-gray-100 sm:p-8 p-4 rounded-[20px] relative"
                                     >
-                                        <h2 className="text-4xl leading-[50px] font-bold sm:w-[298px] w-auto">{item.title}</h2>
+                                        <h2 className="text-3xl leading-[50px] font-bold w-auto">{item.title}</h2>
                                         <div className='absolute sm:bottom-5 bottom-7 flex items-center'>
                                             <button className='px-9 py-2.5  border border-[#14519E] text-base_40/5 font-medium gradient-text rounded-full Outfit'>View All</button>
                                             <div className='p-[13px] border border-[#14519E] rounded-full'>
@@ -126,32 +126,33 @@ const Laptop = () => {
                                 );
                             } else if (item.type === "Product") {
                                 return (
-                                    <div className='sm:h-[382px] h-auto w-auto relative bg-[#F6F6F6] rounded-[20px] sm:pr-3.5 pr-3 sm:pt-[57px] pt-5 sm:pl-[23px] pl-3 pb-[15px]' key={i}>
-                                        <div className='flex justify-center'>
-                                            <Image
-                                                src={item?.image}
-                                                alt='Best Seller'
-                                                height={200}
-                                                width={300}
-                                                className='w-auto h-[190px]'
-                                            />
-                                        </div>
-                                        <div className='flex items-end justify-between'>
-                                            <div>
-                                                <p className='pt-[22px] text-[#2B2A29] text-lg_40/6 font-bold'>{item?.name}</p>
-                                                <p className='pt-[2px] text-[#2B2A29] text-sm_40/5'>Processor {item?.Processor}</p>
-                                                <p className='pt-4 text-xl_36 text-[#2B2A29] font-bold'>₹ {item?.price}</p>
+                                    <Link href="/product/product-details">
+                                        <div className='sm:h-[350px] cursor-pointer group h-auto w-auto relative bg-[#F6F6F6] rounded-[20px] sm:pr-3.5 pr-3 sm:pt-8 pt-5 sm:pl-[23px] pl-3 pb-[15px]' key={i}>
+                                            <div className='flex justify-center'>
+                                                <Image
+                                                    src={item?.image}
+                                                    alt='Best Seller'
+                                                    height={200}
+                                                    width={300}
+                                                    className='w-auto h-[160px] group-hover:scale-110 transform transition-transform duration-300'
+                                                />
                                             </div>
-                                            <div className='sm:h-[80px] h-[30px] sm:w-[80px] w-auto bg-white flex justify-center items-center rounded-[20px]'>
-                                                <Link
-                                                    className='button-linear-gradient text-white cursor-pointer sm:h-[62px] sm:w-[62px] h-14 w-14 rounded-full flex justify-center items-center'
-                                                    href="/laptop/product-details"
-                                                >
-                                                    <PiShoppingCart size={24} />
-                                                </Link>
+                                            <div className='flex pt-5 items-end justify-between'>
+                                                <div>
+                                                    <p className='pt-[22px] text-[#2B2A29] text-lg_40/6 font-bold'>{item?.name}</p>
+                                                    <p className='pt-[2px] text-[#2B2A29] text-sm_40/5'>Processor {item?.Processor}</p>
+                                                    <p className='pt-4 text-xl_36 text-[#2B2A29] font-bold'>₹ {item?.price}</p>
+                                                </div>
+                                                <div className='sm:h-[80px] h-[30px] sm:absolute bottom-0 right-0 sm:mb-0 mb-2 sm:w-[80px] w-auto bg-white flex justify-center items-center rounded-[20px]'>
+                                                    <p
+                                                        className='button-linear-gradient text-white sm:h-[62px] sm:w-[62px] h-14 w-14 rounded-full flex justify-center items-center'
+                                                    >
+                                                        <PiShoppingCart size={24} />
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 );
                             } else {
                                 return null; // Fallback for other item types
@@ -164,5 +165,5 @@ const Laptop = () => {
     )
 }
 
-export default Laptop
+export default Product
 
