@@ -5,10 +5,19 @@ import Image from 'next/image'
 import { HiChevronRight } from "react-icons/hi2";
 import { PiPencilSimpleLineLight, PiStarFill } from 'react-icons/pi';
 import Select from 'react-select';
+import { useSearchParams } from 'next/navigation';
 
 const Profile = () => {
     const [activeSection, setActiveSection] = useState("Profile Information");
 
+    const searchParams = useSearchParams();
+
+    useEffect(() => {
+        const section = searchParams.get("section"); // Get the "section" query parameter
+        if (section) {
+            setActiveSection(section);
+        }
+    }, [searchParams]);
     // useEffect(() => {
     //     if (section) {
     //         setActiveSection(section);
@@ -150,7 +159,7 @@ const Profile = () => {
     };
 
     return (
-        <WebLayout>
+        <WebLayout setActiveSection={setActiveSection}>
             <div className='w-full max-w-[1200px] pb-10 mx-auto pt-5 sm:grid grid-cols-7 gap-x-5 sm:px-0 px-4 z-10'>
                 <div className='col-span-2'>
                     <div className='border border-[#e3e1e1] px-5 py-2.5 gap-x-5 flex items-center'>
@@ -199,7 +208,7 @@ const Profile = () => {
                             </p>
                         </div>
                         <div className='px-5 border-b border-[#e3e1e1] py-2.5 gap-x-5 justify-between flex items-center'>
-                            <div className='flex items-center gap-x-4 w-full'>
+                            <div className="flex items-center gap-x-4 w-full">
                                 <Image
                                     src="/assets/images/shopping-cart-check.svg"
                                     alt="user image"
@@ -207,7 +216,6 @@ const Profile = () => {
                                     height={50}
                                     width={50}
                                 />
-                                {/* <p className='text-[#5C5C5C] text-base font-medium'>My Order</p> */}
                                 <p
                                     className={`py-2.5 pl-9 cursor-pointer text-base w-full font-medium ${activeSection === "MyOrder"
                                         ? "text-[#14519E] bg-[#00A0E31A]"
@@ -791,8 +799,6 @@ const Profile = () => {
                             </div>
                         </div>
                     )}
-
-
                 </div>
             </div>
         </WebLayout>

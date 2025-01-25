@@ -235,32 +235,43 @@ const Home = () => {
                 {/* About Block  */}
                 <div className='grid sm:grid-cols-2 grid-cols-1 gap-x-[60px] overflow-hidden items-center relative'>
                     <Image
-                        src="/assets/images/about-image.png"
+                        src='/assets/images/about-image.png'
                         alt='About image'
                         height={650}
                         width={960}
                         className='sm:w-[960px] sm:h-[600px]  sm:block hidden h-auto w-auto object-cover'
                     />
                     <div className='sm:px-0 px-4 sm:pt-0 pt-10'>
-                        <h2 className='sm:text-[48px] text-3xl font-bold text-[#2B2A29] SF_Pro'>About Icon Digital</h2>
-                        <p className='text-[#2B2A29] sm:pt-6 pt-2 max-w-[618px] font-medium sm:text-base_40/6 text-sm_40/5'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        <button className='sm:px-9 px-6 sm:py-[15px] py-3 button-linear-gradient text-base_40/5 font-medium text-white rounded-full sm:mt-5 mt-4 Outfit'>Read More</button>
+                        <h2 className='sm:text-[48px] text-3xl font-bold text-[#2B2A29] SF_Pro'>
+                            About Icon Digital
+                        </h2>
+                        <p className='text-[#2B2A29] sm:pt-6 pt-2 max-w-[618px] font-medium sm:text-base_40/6 text-sm_40/5'>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text
+                            ever since the 1500s Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s.
+                        </p>
+                        <button className='px-9 py-[15px] button-linear-gradient text-base_40/5 font-medium text-white rounded-full sm:mt-5 mt-7 Outfit'>
+                            Read More
+                        </button>
                     </div>
                     <Image
-                        src="/assets/images/about-image.png"
+                        src='/assets/images/about-image.png'
                         alt='About image'
                         height={650}
                         width={960}
-                        className='sm:w-[960px] sm:hidden block sm:pt-0 pt-8 sm:h-[600px] h-auto w-auto object-cover'
+                        className='sm:w-[960px] sm:hidden block sm:pt-0 pt-4 sm:h-[600px] h-auto w-auto object-cover'
                     />
                     <Image
-                        src="/assets/images/about-bg-image.png"
+                        src='/assets/images/about-bg-image.png'
                         alt='About background'
                         height={270}
                         width={210}
                         className='object-cover absolute sm:block hidden -bottom-8 right-36'
                     />
                 </div>
+
 
                 {/* Shop By Processor */}
                 <div className="bg-[url('/assets/images/Processor-bg-image.png')] sm:h-[677px] h-auto w-auto bg-cover">

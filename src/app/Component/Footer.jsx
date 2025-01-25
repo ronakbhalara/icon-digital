@@ -1,9 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import { PiCopyright } from 'react-icons/pi';
 
 const Footer = () => {
+  const router = useRouter();
+
+  const handleRedirect = () => {
+    router.push("/profile?section=MyOrder"); // Redirect with query parameter
+  };
   return (
     <div className='h-auto bg-[#F5F5F5] sm:pt-[100px] mt-20 pt-9 sm:pb-[62px] pb-7 relative'>
       <div className='w-full max-w-[1300px] mx-auto px-5'>
@@ -42,6 +48,12 @@ const Footer = () => {
                 >
                   Our Stores
                 </Link>
+                <button
+                  className="cursor-pointer block hover:text-[#2B2A29] transition-colors"
+                  onClick={handleRedirect}
+                >
+                  My Order Status
+                </button>
               </div>
             </div>
 
